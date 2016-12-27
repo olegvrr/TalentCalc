@@ -1,0 +1,25 @@
+## Interface: 12100
+## Author: Guho
+## Title: Talent Calculator
+## Notes: Provides an in-game facility to calculate talents. Allows to store and share created builds within your party/raid.
+## Version: 1.0.0
+## SavedVariables: 
+TalentCalculator.xml
+ClassFrames\Druid.lua
+ClassFrames\Hunter.lua
+ClassFrames\Mage.lua
+ClassFrames\Paladin.lua
+ClassFrames\Priest.lua
+ClassFrames\Rogue.lua
+ClassFrames\Shaman.lua
+ClassFrames\Warlock.lua
+ClassFrames\Warrior.lua
+ClassFrames\Resources\Druid.lua
+ClassFrames\Resources\Hunter.lua
+ClassFrames\Resources\Mage.lua
+ClassFrames\Resources\Paladin.lua
+ClassFrames\Resources\Priest.lua
+ClassFrames\Resources\Rogue.lua
+ClassFrames\Resources\Shaman.lua
+ClassFrames\Resources\Warlock.lua
+ClassFrames\Resources\Warrior.lua
