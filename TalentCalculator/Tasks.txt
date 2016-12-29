@@ -1,9 +1,0 @@
-1. Minamap buton for show/hide
-2. Talent frame with class selector
-3. Talent frame with talents for currently selected class
-4. Autoselect owners class on load
-5. Ability to save/load talents builds
-6. Ability to share/receive talents
-7. Ability to save shared
-8. Ability to give up current talents by request from raid leader / assist
-9. Ability to change fonts
