@@ -668,7 +668,7 @@ end
 
 function TCalc_CreateDependencyUI(fromButton, toButton, parentTab)
     local dependencyUI2;
-    local dependencyUIX = TCalc_talentsLeftOffset + fromButton.columnNumber * 50 + fromButton.tabNumber * 250 + fromButton:GetWidth()/4;
+    local dependencyUIX = TCalc_talentsLeftOffset + fromButton.columnNumber * 50 + fromButton.tabNumber * 250 + fromButton:GetWidth()/3;
     local dependencyUIY = TCalc_talentsTopOffset + fromButton.tierNumber * 55;
     
     local toButtonY = TCalc_talentsTopOffset + toButton.tierNumber * 55;
@@ -676,29 +676,29 @@ function TCalc_CreateDependencyUI(fromButton, toButton, parentTab)
     local width = 0;
     local height = 0;
     if(dependencyUIY == toButtonY)then
-        height = fromButton:GetWidth()/2;
-        width =  TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 - dependencyUIX -30;
-        dependencyUIY = dependencyUIY + fromButton:GetWidth()/4;
-        dependencyUIX = dependencyUIX + 30;
+        height = fromButton:GetWidth()/3;
+        width =  TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 - dependencyUIX - fromButton:GetWidth() * 2 / 3;
+        dependencyUIY = dependencyUIY + fromButton:GetWidth()/3;
+        dependencyUIX = dependencyUIX + fromButton:GetWidth() * 2 / 3;
     else
-        local destinationX = TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 + toButton:GetWidth()/4;
+        local destinationX = TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 + toButton:GetWidth()/3;
         if (destinationX ~= dependencyUIX) then
-            local height2 = fromButton:GetWidth()/2;
+            local height2 = fromButton:GetWidth()/3;
             local width2 =  TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 - dependencyUIX;
-            local dependencyUIY2 = dependencyUIY + fromButton:GetWidth()/4;
-            local dependencyUIX2 = dependencyUIX + 30;
+            local dependencyUIY2 = dependencyUIY + fromButton:GetWidth()/3;
+            local dependencyUIX2 = dependencyUIX + fromButton:GetWidth() * 2 / 3;
             
             dependencyUI2 = TCalc_CreateLine(dependencyUIX2, -dependencyUIY2, width2, height2, parentTab);
             dependencyUI2.tooltipString = toButton.talentName ..' requires ' .. fromButton.maxPoints .. ' points in ' .. fromButton.talentName;
         
-            dependencyUIX = TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 + fromButton:GetWidth()/4;
-            dependencyUIY = dependencyUIY + fromButton:GetWidth() * 3 / 4;
+            dependencyUIX = TCalc_talentsLeftOffset + toButton.columnNumber * 50 + toButton.tabNumber * 250 + fromButton:GetWidth()/3;
+            dependencyUIY = dependencyUIY + fromButton:GetWidth() * 2 / 3;
             height = toButtonY - dependencyUIY;
-            width = fromButton:GetWidth()/2;
+            width = fromButton:GetWidth()/3;
         else
             dependencyUIY = dependencyUIY + 40;
             height = toButtonY - dependencyUIY;
-            width = fromButton:GetWidth()/2;
+            width = fromButton:GetWidth()/3;
         end
     end
     --ChatFrame1:AddMessage(dependencyUIX .. ' ' .. -dependencyUIY .. ' ' .. width);

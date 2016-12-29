@@ -91,6 +91,8 @@ TCalc_hunterImprovedRevivePet.parentTalent = nil;
 TCalc_hunterImprovedRevivePet.childTalent = nil;
 TCalc_hunterImprovedRevivePet.iconPath = "Interface\\Icons\\Ability_hunter_beastsoothe";
 
+--Tier 2
+
 TCalc_hunterPathfinding = {}
 TCalc_hunterPathfinding.maxPoints = 2;
 TCalc_hunterPathfinding.talentName = "Pathfinding";
@@ -132,7 +134,7 @@ TCalc_hunterUnleashedFury.parentTalent = nil;
 TCalc_hunterUnleashedFury.childTalent = nil;
 TCalc_hunterUnleashedFury.iconPath = "Interface\\Icons\\Ability_bullrush";
 
---Tier 2
+--Tier 3
 
 TCalc_hunterImprovedMendPet = {}
 TCalc_hunterImprovedMendPet.maxPoints = 2;
@@ -163,7 +165,7 @@ TCalc_hunterFerocity.parentTalent = nil;
 TCalc_hunterFerocity.childTalent = TCalc_hunterFrenzy;
 TCalc_hunterFerocity.iconPath = "Interface\\Icons\\Inv_misc_monsterclaw_04";
 
---Tier 3
+--Tier 4
 
 TCalc_hunterSpiritBond = {}
 TCalc_hunterSpiritBond.maxPoints = 2;
@@ -180,7 +182,7 @@ TCalc_hunterSpiritBond.iconPath = "Interface\\Icons\\Ability_druid_demoralizingr
 
 TCalc_hunterIntimidation = {}
 TCalc_hunterIntimidation.maxPoints = 1;
-TCalc_hunterIntimidation.talentName = "";
+TCalc_hunterIntimidation.talentName = "Intimidation";
 TCalc_hunterIntimidation.resourceCost = "8% of base mana\t100 Yd range";
 TCalc_hunterIntimidation.castCooldown = "Instant\t1 min cooldown";
 TCalc_hunterIntimidation.requirements = nil;
@@ -220,6 +222,8 @@ TCalc_hunterFrenzy.talentDescriptions[4] = "Gives your pet a 100% chance to gain
 TCalc_hunterFrenzy.parentTalent = TCalc_hunterFerocity;
 TCalc_hunterFrenzy.childTalent = nil;
 TCalc_hunterFrenzy.iconPath = "Interface\\Icons\\Inv_misc_monsterclaw_03";
+
+--Tier 6
 
 TCalc_hunterBestialWrath = {}
 TCalc_hunterBestialWrath.maxPoints = 1;
@@ -266,7 +270,7 @@ TCalc_hunterEfficiency.talentDescriptions[3] = "Reduces the Mana cost of your Sh
 TCalc_hunterEfficiency.talentDescriptions[4] = "Reduces the Mana cost of your Shots and Stings by 10%.";
 TCalc_hunterEfficiency.parentTalent = nil;
 TCalc_hunterEfficiency.childTalent = nil;
-TCalc_hunterEfficiency.iconPath = "Interface\\Icons\\";
+TCalc_hunterEfficiency.iconPath = "Interface\\Icons\\Spell_frost_wizardmark";
 
 --Tier 1
 
@@ -386,7 +390,7 @@ TCalc_hunterScatterShot = {}
 TCalc_hunterScatterShot.maxPoints = 1;
 TCalc_hunterScatterShot.talentName = "Scatter Shot";
 TCalc_hunterScatterShot.resourceCost = "8% of base mana\t15 Yd range";
-TCalc_hunterScatterShot.castCooldown = "\t30 sec cooldown";
+TCalc_hunterScatterShot.castCooldown = "Instant\t30 sec cooldown";
 TCalc_hunterScatterShot.requirements = nil;
 TCalc_hunterScatterShot.talentDescriptions = {};
 TCalc_hunterScatterShot.talentDescriptions[0] = "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used.";
@@ -549,117 +553,146 @@ TCalc_hunterImprovedWingClip.childTalent = nil;
 TCalc_hunterImprovedWingClip.iconPath = "Interface\\Icons\\Ability_rogue_trip";
 
 --Tier 2
---[[
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
+TCalc_hunterCleverTraps = {}
+TCalc_hunterCleverTraps.maxPoints = 2;
+TCalc_hunterCleverTraps.talentName = "Clever Traps";
+TCalc_hunterCleverTraps.resourceCost = nil;
+TCalc_hunterCleverTraps.castCooldown = nil;
+TCalc_hunterCleverTraps.requirements = nil;
+TCalc_hunterCleverTraps.talentDescriptions = {};
+TCalc_hunterCleverTraps.talentDescriptions[0] = "Increases the duration of Freezing and Frost trap effects by 15% and the damage of Immolation and Explosive trap effects by 15%.";
+TCalc_hunterCleverTraps.talentDescriptions[1] = "Increases the duration of Freezing and Frost trap effects by 30% and the damage of Immolation and Explosive trap effects by 30%.";
+TCalc_hunterCleverTraps.parentTalent = nil;
+TCalc_hunterCleverTraps.childTalent = nil;
+TCalc_hunterCleverTraps.iconPath = "Interface\\Icons\\Spell_Nature_TimeStop";
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
+TCalc_hunterSurvivalist = {}
+TCalc_hunterSurvivalist.maxPoints = 5;
+TCalc_hunterSurvivalist.talentName = "Survivalist";
+TCalc_hunterSurvivalist.resourceCost = nil;
+TCalc_hunterSurvivalist.castCooldown = nil;
+TCalc_hunterSurvivalist.requirements = nil;
+TCalc_hunterSurvivalist.talentDescriptions = {};
+TCalc_hunterSurvivalist.talentDescriptions[0] = "Increases total health by 2%.";
+TCalc_hunterSurvivalist.talentDescriptions[1] = "Increases total health by 4%.";
+TCalc_hunterSurvivalist.talentDescriptions[2] = "Increases total health by 6%.";
+TCalc_hunterSurvivalist.talentDescriptions[3] = "Increases total health by 8%.";
+TCalc_hunterSurvivalist.talentDescriptions[4] = "Increases total health by 10%.";
+TCalc_hunterSurvivalist.parentTalent = nil;
+TCalc_hunterSurvivalist.childTalent = nil;
+TCalc_hunterSurvivalist.iconPath = "Interface\\Icons\\Spell_shadow_twilight";
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
+TCalc_hunterDeterrence = {}
+TCalc_hunterDeterrence.maxPoints = 1;
+TCalc_hunterDeterrence.talentName = "Deterrence";
+TCalc_hunterDeterrence.resourceCost = nil;
+TCalc_hunterDeterrence.castCooldown = "Instant\t5 min cooldown";
+TCalc_hunterDeterrence.requirements = nil;
+TCalc_hunterDeterrence.talentDescriptions = {};
+TCalc_hunterDeterrence.talentDescriptions[0] = "When activated, increases your Dodge and Parry chance by 25% for 10 sec.";
+TCalc_hunterDeterrence.parentTalent = nil;
+TCalc_hunterDeterrence.childTalent = TCalc_hunterCounterattack;
+TCalc_hunterDeterrence.iconPath = "Interface\\Icons\\Ability_whirlwind";
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
+--Tier 3
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
-----------------------
+TCalc_hunterTrapMastery = {}
+TCalc_hunterTrapMastery.maxPoints = 2;
+TCalc_hunterTrapMastery.talentName = "Trap Mastery";
+TCalc_hunterTrapMastery.resourceCost = nil;
+TCalc_hunterTrapMastery.castCooldown = nil;
+TCalc_hunterTrapMastery.requirements = nil;
+TCalc_hunterTrapMastery.talentDescriptions = {};
+TCalc_hunterTrapMastery.talentDescriptions[0] = "Decreases the chance enemies will resist trap effects by 5%.";
+TCalc_hunterTrapMastery.talentDescriptions[1] = "Decreases the chance enemies will resist trap effects by 10%.";
+TCalc_hunterTrapMastery.parentTalent = nil;
+TCalc_hunterTrapMastery.childTalent = nil;
+TCalc_hunterTrapMastery.iconPath = "Interface\\Icons\\Ability_ensnare";
 
-TCalc_hunter = {}
-.maxPoints = 5;
-.talentName = "";
-.resourceCost = nil;
-.castCooldown = nil;
-.requirements = nil;
-.talentDescriptions = {};
-.talentDescriptions[0] = "";
-.talentDescriptions[1] = "";
-.talentDescriptions[2] = "";
-.talentDescriptions[3] = "";
-.talentDescriptions[4] = "";
-.parentTalent = nil;
-.childTalent = nil;
-.iconPath = "Interface\\Icons\\";
-]]
+TCalc_hunterSurefooted = {}
+TCalc_hunterSurefooted.maxPoints = 3;
+TCalc_hunterSurefooted.talentName = "Surefooted";
+TCalc_hunterSurefooted.resourceCost = nil;
+TCalc_hunterSurefooted.castCooldown = nil;
+TCalc_hunterSurefooted.requirements = nil;
+TCalc_hunterSurefooted.talentDescriptions = {};
+TCalc_hunterSurefooted.talentDescriptions[0] = "Increases hit chance by 1% and increases the chance movement impairing effects will be resisted by an additional 5%.";
+TCalc_hunterSurefooted.talentDescriptions[1] = "Increases hit chance by 2% and increases the chance movement impairing effects will be resisted by an additional 10%.";
+TCalc_hunterSurefooted.talentDescriptions[2] = "Increases hit chance by 3% and increases the chance movement impairing effects will be resisted by an additional 15%.";
+TCalc_hunterSurefooted.parentTalent = nil;
+TCalc_hunterSurefooted.childTalent = nil;
+TCalc_hunterSurefooted.iconPath = "Interface\\Icons\\Ability_kick";
+
+TCalc_hunterImprovedFeignDeath = {}
+TCalc_hunterImprovedFeignDeath.maxPoints = 2;
+TCalc_hunterImprovedFeignDeath.talentName = "Improved Feign Death";
+TCalc_hunterImprovedFeignDeath.resourceCost = nil;
+TCalc_hunterImprovedFeignDeath.castCooldown = nil;
+TCalc_hunterImprovedFeignDeath.requirements = nil;
+TCalc_hunterImprovedFeignDeath.talentDescriptions = {};
+TCalc_hunterImprovedFeignDeath.talentDescriptions[0] = "Reduces the chance your Feign Death ability will be resisted by 2%.";
+TCalc_hunterImprovedFeignDeath.talentDescriptions[1] = "Reduces the chance your Feign Death ability will be resisted by 4%.";
+TCalc_hunterImprovedFeignDeath.parentTalent = nil;
+TCalc_hunterImprovedFeignDeath.childTalent = nil;
+TCalc_hunterImprovedFeignDeath.iconPath = "Interface\\Icons\\Ability_rogue_feigndeath";
+
+--Tier 4
+
+TCalc_hunterKillerInstinct = {}
+TCalc_hunterKillerInstinct.maxPoints = 3;
+TCalc_hunterKillerInstinct.talentName = "Killer Instinct";
+TCalc_hunterKillerInstinct.resourceCost = nil;
+TCalc_hunterKillerInstinct.castCooldown = nil;
+TCalc_hunterKillerInstinct.requirements = nil;
+TCalc_hunterKillerInstinct.talentDescriptions = {};
+TCalc_hunterKillerInstinct.talentDescriptions[0] = "Increases your critical strike chance with all attacks by 1%.";
+TCalc_hunterKillerInstinct.talentDescriptions[1] = "Increases your critical strike chance with all attacks by 2%.";
+TCalc_hunterKillerInstinct.talentDescriptions[2] = "Increases your critical strike chance with all attacks by 3%.";
+TCalc_hunterKillerInstinct.parentTalent = nil;
+TCalc_hunterKillerInstinct.childTalent = TCalc_hunterWyvernSting;
+TCalc_hunterKillerInstinct.iconPath = "Interface\\Icons\\Spell_holy_blessingofstamina";
+
+TCalc_hunterCounterattack = {}
+TCalc_hunterCounterattack.maxPoints = 1;
+TCalc_hunterCounterattack.talentName = "Counterattack";
+TCalc_hunterCounterattack.resourceCost = "45 mana\tMelee Range";
+TCalc_hunterCounterattack.castCooldown = "Instant";
+TCalc_hunterCounterattack.requirements = nil;
+TCalc_hunterCounterattack.talentDescriptions = {};
+TCalc_hunterCounterattack.talentDescriptions[0] = "A strike that becomes active after parrying an opponent's attack. This attack deals 40 damage and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried.";
+TCalc_hunterCounterattack.parentTalent = TCalc_hunterDeterrence;
+TCalc_hunterCounterattack.childTalent = nil;
+TCalc_hunterCounterattack.iconPath = "Interface\\Icons\\Ability_warrior_challange";
+
+--Tier 5
+
+TCalc_hunterLightningReflexes = {}
+TCalc_hunterLightningReflexes.maxPoints = 5;
+TCalc_hunterLightningReflexes.talentName = "Lightning Reflexes";
+TCalc_hunterLightningReflexes.resourceCost = nil;
+TCalc_hunterLightningReflexes.castCooldown = nil;
+TCalc_hunterLightningReflexes.requirements = nil;
+TCalc_hunterLightningReflexes.talentDescriptions = {};
+TCalc_hunterLightningReflexes.talentDescriptions[0] = "Increases your Agility by 3%.";
+TCalc_hunterLightningReflexes.talentDescriptions[1] = "Increases your Agility by 6%.";
+TCalc_hunterLightningReflexes.talentDescriptions[2] = "Increases your Agility by 9%.";
+TCalc_hunterLightningReflexes.talentDescriptions[3] = "Increases your Agility by 12%.";
+TCalc_hunterLightningReflexes.talentDescriptions[4] = "Increases your Agility by 15%.";
+TCalc_hunterLightningReflexes.parentTalent = nil;
+TCalc_hunterLightningReflexes.childTalent = nil;
+TCalc_hunterLightningReflexes.iconPath = "Interface\\Icons\\Spell_nature_invisibilty";
+
+--Tier 6
+
+TCalc_hunterWyvernSting = {}
+TCalc_hunterWyvernSting.maxPoints = 1;
+TCalc_hunterWyvernSting.talentName = "Wyvern Sting";
+TCalc_hunterWyvernSting.resourceCost = "115 mana\t35 Yd range";
+TCalc_hunterWyvernSting.castCooldown = "Instant";
+TCalc_hunterWyvernSting.requirements = "Requires Ranged Weapon";
+TCalc_hunterWyvernSting.talentDescriptions = {};
+TCalc_hunterWyvernSting.talentDescriptions[0] = "A stinging shot that puts the target to sleep for 12 sec. Any damage will cancel the effect. When the target wakes up, the Sting causes 0 Nature damage over 12 sec. Only usable out of combat. Only one Sting per Hunter can be active on the target at a time.";
+TCalc_hunterWyvernSting.parentTalent = TCalc_hunterKillerInstinct;
+TCalc_hunterWyvernSting.childTalent = nil;
+TCalc_hunterWyvernSting.iconPath = "Interface\\Icons\\Inv_spear_02";
