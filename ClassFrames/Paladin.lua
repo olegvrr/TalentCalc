@@ -52,5 +52,54 @@ function TCalc_PaladinFrameActivated()
 end
 
 function TCalc_InitPaladinTalentButtons()
+    --Tab 1
+    --Tier 0
+
+    --Tier 1
+
+    --Tier 2
+
+
+    --Tier 3
+
+    --Tier 4
+
+    --Tier 5
+
+    --Tier 6
     
+
+    --Tab 1
+    --Tier 0
+
+    --Tier 1
+
+    --Tier 2
+
+
+    --Tier 3
+
+    --Tier 4
+
+    --Tier 5
+
+    --Tier 6
+
+    
+    --Tab 2
+    --Tier 0
+
+    --Tier 1
+
+    --Tier 2
+    local sealOfCommandTalentButton = TCalc_CreateTalentButton(TCalc_paladinSealOfCommand, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(sealOfCommandTalentButton, 2, 2, 2, TCalc_PaladinFrame);
+    
+    --Tier 3
+
+    --Tier 4
+
+    --Tier 5
+
+    --Tier 6
 end
