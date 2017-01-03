@@ -87,7 +87,6 @@ function TCalc_ProcessMessage(targetMessage, sender, channel)
 
     if (code == TCalc_inspectResponseCode and sender == TCalc_nameWaiting) then
         local classNumber = tonumber(string.sub(targetMessage, 5, 5));
-        println(classNumber);
         local targetFrame = TCalc_frames[classNumber];
         TCalc_SwitchFrame(targetFrame);
         local talentString = string.sub(targetMessage, 6, messageLength);
