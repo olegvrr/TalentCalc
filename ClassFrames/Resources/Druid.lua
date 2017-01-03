@@ -18,7 +18,7 @@ TCalc_druidImprovedWrath.childTalent = nil;
 TCalc_druidImprovedWrath.iconPath = "Interface\\Icons\\Spell_nature_abolishmagic";
 
 TCalc_druidNaturesGrasp = {}
-TCalc_druidNaturesGrasp.maxPoints = 5;
+TCalc_druidNaturesGrasp.maxPoints = 1;
 TCalc_druidNaturesGrasp.talentName = "Nature's Grasp";
 TCalc_druidNaturesGrasp.resourceCost = "50 mana";
 TCalc_druidNaturesGrasp.castCooldown = "Instant\t1 min cooldown";
