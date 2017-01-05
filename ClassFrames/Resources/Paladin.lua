@@ -1,9 +1,86 @@
 --Tab 0
 --Tier 0
+TCalc_paladinDivineStrength = {}
+TCalc_paladinDivineStrength.maxPoints = 5;
+TCalc_paladinDivineStrength.talentName = "Divine Strength";
+TCalc_paladinDivineStrength.resourceCost = nil;
+TCalc_paladinDivineStrength.castCooldown = nil;
+TCalc_paladinDivineStrength.requirements = nil;
+TCalc_paladinDivineStrength.talentDescriptions = {};
+TCalc_paladinDivineStrength.talentDescriptions[0] = "Increases your Strength by 2%.";
+TCalc_paladinDivineStrength.talentDescriptions[1] = "Increases your Strength by 4%.";
+TCalc_paladinDivineStrength.talentDescriptions[2] = "Increases your Strength by 6%.";
+TCalc_paladinDivineStrength.talentDescriptions[3] = "Increases your Strength by 8%.";
+TCalc_paladinDivineStrength.talentDescriptions[4] = "Increases your Strength by 10%.";
+TCalc_paladinDivineStrength.parentTalent = nil;
+TCalc_paladinDivineStrength.childTalent = nil;
+TCalc_paladinDivineStrength.iconPath = "Interface\\Icons\\Ability_golemthunderclap";
+
+TCalc_paladinDivineIntellect = {}
+TCalc_paladinDivineIntellect.maxPoints = 5;
+TCalc_paladinDivineIntellect.talentName = "Divine Intellect";
+TCalc_paladinDivineIntellect.resourceCost = nil;
+TCalc_paladinDivineIntellect.castCooldown = nil;
+TCalc_paladinDivineIntellect.requirements = nil;
+TCalc_paladinDivineIntellect.talentDescriptions = {};
+TCalc_paladinDivineIntellect.talentDescriptions[0] = "Increases your total Intellect by 2%.";
+TCalc_paladinDivineIntellect.talentDescriptions[1] = "Increases your total Intellect by 4%.";
+TCalc_paladinDivineIntellect.talentDescriptions[2] = "Increases your total Intellect by 6%.";
+TCalc_paladinDivineIntellect.talentDescriptions[3] = "Increases your total Intellect by 8%.";
+TCalc_paladinDivineIntellect.talentDescriptions[4] = "Increases your total Intellect by 10%.";
+TCalc_paladinDivineIntellect.parentTalent = nil;
+TCalc_paladinDivineIntellect.childTalent = nil;
+TCalc_paladinDivineIntellect.iconPath = "Interface\\Icons\\Spell_nature_sleep";
 
 --Tier 1
 
+TCalc_paladinSpirituaFocus = {}
+TCalc_paladinSpirituaFocus.maxPoints = 5;
+TCalc_paladinSpirituaFocus.talentName = "Spiritual Focus";
+TCalc_paladinSpirituaFocus.resourceCost = nil;
+TCalc_paladinSpirituaFocus.castCooldown = nil;
+TCalc_paladinSpirituaFocus.requirements = nil;
+TCalc_paladinSpirituaFocus.talentDescriptions = {};
+TCalc_paladinSpirituaFocus.talentDescriptions[0] = "Gives your Flash of Light and Holy Light spells a 14% chance to not lose casting time when you take damage..";
+TCalc_paladinSpirituaFocus.talentDescriptions[1] = "Gives your Flash of Light and Holy Light spells a 28% chance to not lose casting time when you take damage..";
+TCalc_paladinSpirituaFocus.talentDescriptions[2] = "Gives your Flash of Light and Holy Light spells a 42% chance to not lose casting time when you take damage..";
+TCalc_paladinSpirituaFocus.talentDescriptions[3] = "Gives your Flash of Light and Holy Light spells a 56% chance to not lose casting time when you take damage..";
+TCalc_paladinSpirituaFocus.talentDescriptions[4] = "Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage..";
+TCalc_paladinSpirituaFocus.parentTalent = nil;
+TCalc_paladinSpirituaFocus.childTalent = nil;
+TCalc_paladinSpirituaFocus.iconPath = "Interface\\Icons\\Spell_arcane_blink";
+
+TCalc_paladinImprovedSealOfRighteousness = {}
+TCalc_paladinImprovedSealOfRighteousness.maxPoints = 5;
+TCalc_paladinImprovedSealOfRighteousness.talentName = "Improved Seal of Righteousness";
+TCalc_paladinImprovedSealOfRighteousness.resourceCost = nil;
+TCalc_paladinImprovedSealOfRighteousness.castCooldown = nil;
+TCalc_paladinImprovedSealOfRighteousness.requirements = nil;
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions = {};
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions[0] = "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 3%.";
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions[1] = "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 6%.";
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions[2] = "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 9%.";
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions[3] = "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 12%.";
+TCalc_paladinImprovedSealOfRighteousness.talentDescriptions[4] = "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 15%.";
+TCalc_paladinImprovedSealOfRighteousness.parentTalent = nil;
+TCalc_paladinImprovedSealOfRighteousness.childTalent = nil;
+TCalc_paladinImprovedSealOfRighteousness.iconPath = "Interface\\Icons\\Ability_thunderbolt";
+
 --Tier 2
+TCalc_paladinHealingLight = {}
+TCalc_paladinHealingLight.maxPoints = 3;
+TCalc_paladinHealingLight.talentName = "Healing Light";
+TCalc_paladinHealingLight.resourceCost = nil;
+TCalc_paladinHealingLight.castCooldown = nil;
+TCalc_paladinHealingLight.requirements = nil;
+TCalc_paladinHealingLight.talentDescriptions = {};
+TCalc_paladinHealingLight.talentDescriptions[0] = "Increases the amount healed by your Holy Light and Flash of Light spells by 4%.";
+TCalc_paladinHealingLight.talentDescriptions[1] = "Increases the amount healed by your Holy Light and Flash of Light spells by 8%.";
+TCalc_paladinHealingLight.talentDescriptions[2] = "Increases the amount healed by your Holy Light and Flash of Light spells by 12%.";
+TCalc_paladinHealingLight.parentTalent = nil;
+TCalc_paladinHealingLight.childTalent = nil;
+TCalc_paladinHealingLight.iconPath = "Interface\\Icons\\Spell_holy_holybolt";
+
 TCalc_paladinConsecration = {}
 TCalc_paladinConsecration.maxPoints = 1;
 TCalc_paladinConsecration.talentName = "Consecration";
@@ -16,7 +93,62 @@ TCalc_paladinConsecration.parentTalent = nil;
 TCalc_paladinConsecration.childTalent = nil;
 TCalc_paladinConsecration.iconPath = "Interface\\Icons\\Spell_holy_innerfire";
 
+TCalc_paladinImprovedLayOnHands = {}
+TCalc_paladinImprovedLayOnHands.maxPoints = 2;
+TCalc_paladinImprovedLayOnHands.talentName = "Improved Lay on Hands";
+TCalc_paladinImprovedLayOnHands.resourceCost = nil;
+TCalc_paladinImprovedLayOnHands.castCooldown = nil;
+TCalc_paladinImprovedLayOnHands.requirements = nil;
+TCalc_paladinImprovedLayOnHands.talentDescriptions = {};
+TCalc_paladinImprovedLayOnHands.talentDescriptions[0] = "Gives the target of your Lay on Hands spell a 15% bonus to their armor value from items for 2 min. In addition, the cooldown for your Lay on Hands spell is reduced by 10 min.";
+TCalc_paladinImprovedLayOnHands.talentDescriptions[1] = "Gives the target of your Lay on Hands spell a 30% bonus to their armor value from items for 2 min. In addition, the cooldown for your Lay on Hands spell is reduced by 20 min.";
+TCalc_paladinImprovedLayOnHands.parentTalent = nil;
+TCalc_paladinImprovedLayOnHands.childTalent = nil;
+TCalc_paladinImprovedLayOnHands.iconPath = "Interface\\Icons\\Spell_holy_layonhands";
+
+TCalc_paladinUnyieldingFaith = {}
+TCalc_paladinUnyieldingFaith.maxPoints = 2;
+TCalc_paladinUnyieldingFaith.talentName = "Unyielding Faith";
+TCalc_paladinUnyieldingFaith.resourceCost = nil;
+TCalc_paladinUnyieldingFaith.castCooldown = nil;
+TCalc_paladinUnyieldingFaith.requirements = nil;
+TCalc_paladinUnyieldingFaith.talentDescriptions = {};
+TCalc_paladinUnyieldingFaith.talentDescriptions[0] = "Increases your chance to resist Fear and Disorient effects by an additional 5%.";
+TCalc_paladinUnyieldingFaith.talentDescriptions[1] = "Increases your chance to resist Fear and Disorient effects by an additional 10%.";
+TCalc_paladinUnyieldingFaith.parentTalent = nil;
+TCalc_paladinUnyieldingFaith.childTalent = nil;
+TCalc_paladinUnyieldingFaith.iconPath = "Interface\\Icons\\Spell_holy_unyieldingfaith";
+
 --Tier 3
+
+TCalc_paladinIllumination = {}
+TCalc_paladinIllumination.maxPoints = 5;
+TCalc_paladinIllumination.talentName = "Illumination";
+TCalc_paladinIllumination.resourceCost = nil;
+TCalc_paladinIllumination.castCooldown = nil;
+TCalc_paladinIllumination.requirements = nil;
+TCalc_paladinIllumination.talentDescriptions = {};
+TCalc_paladinIllumination.talentDescriptions[0] = "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 20% chance to gain Mana equal to the base cost of the spell.";
+TCalc_paladinIllumination.talentDescriptions[1] = "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 40% chance to gain Mana equal to the base cost of the spell.";
+TCalc_paladinIllumination.talentDescriptions[2] = "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 60% chance to gain Mana equal to the base cost of the spell.";
+TCalc_paladinIllumination.talentDescriptions[3] = "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 80% chance to gain Mana equal to the base cost of the spell.";
+TCalc_paladinIllumination.talentDescriptions[4] = "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 100% chance to gain Mana equal to the base cost of the spell.";
+TCalc_paladinIllumination.parentTalent = nil;
+TCalc_paladinIllumination.childTalent = TCalc_paladinDivineFavor;
+TCalc_paladinIllumination.iconPath = "Interface\\Icons\\Spell_holy_greaterheal";
+
+TCalc_paladinImprovedBlessingOfWisdom = {}
+TCalc_paladinImprovedBlessingOfWisdom.maxPoints = 2;
+TCalc_paladinImprovedBlessingOfWisdom.talentName = "Improved Blessing of Wisdom";
+TCalc_paladinImprovedBlessingOfWisdom.resourceCost = nil;
+TCalc_paladinImprovedBlessingOfWisdom.castCooldown = nil;
+TCalc_paladinImprovedBlessingOfWisdom.requirements = nil;
+TCalc_paladinImprovedBlessingOfWisdom.talentDescriptions = {};
+TCalc_paladinImprovedBlessingOfWisdom.talentDescriptions[0] = "Increases the effect of your Blessing of Wisdom spell by 10%.";
+TCalc_paladinImprovedBlessingOfWisdom.talentDescriptions[1] = "Increases the effect of your Blessing of Wisdom spell by 20%.";
+TCalc_paladinImprovedBlessingOfWisdom.parentTalent = nil;
+TCalc_paladinImprovedBlessingOfWisdom.childTalent = nil;
+TCalc_paladinImprovedBlessingOfWisdom.iconPath = "Interface\\Icons\\Spell_holy_sealofwisdom";
 
 --Tier 4
 TCalc_paladinDivineFavor = {}
@@ -27,11 +159,40 @@ TCalc_paladinDivineFavor.castCooldown = "Instant cast\t2 min cooldown";
 TCalc_paladinDivineFavor.requirements = nil;
 TCalc_paladinDivineFavor.talentDescriptions = {};
 TCalc_paladinDivineFavor.talentDescriptions[0] = "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.";
-TCalc_paladinDivineFavor.parentTalent = nil;
-TCalc_paladinDivineFavor.childTalent = nil;
+TCalc_paladinDivineFavor.parentTalent = TCalc_paladinIllumination;
+TCalc_paladinDivineFavor.childTalent = TCalc_paladinHolyShock;
 TCalc_paladinDivineFavor.iconPath = "Interface\\Icons\\Spell_holy_heal";
 
+TCalc_paladinLastingJudgement = {}
+TCalc_paladinLastingJudgement.maxPoints = 3;
+TCalc_paladinLastingJudgement.talentName = "Lasting Judgement";
+TCalc_paladinLastingJudgement.resourceCost = nil;
+TCalc_paladinLastingJudgement.castCooldown = nil;
+TCalc_paladinLastingJudgement.requirements = nil;
+TCalc_paladinLastingJudgement.talentDescriptions = {};
+TCalc_paladinLastingJudgement.talentDescriptions[0] = "Increases the duration of your Judgement of Light and Judgement of Wisdom by 10 sec.";
+TCalc_paladinLastingJudgement.talentDescriptions[1] = "Increases the duration of your Judgement of Light and Judgement of Wisdom by 20 sec.";
+TCalc_paladinLastingJudgement.talentDescriptions[2] = "Increases the duration of your Judgement of Light and Judgement of Wisdom by 30 sec.";
+TCalc_paladinLastingJudgement.parentTalent = nil;
+TCalc_paladinLastingJudgement.childTalent = nil;
+TCalc_paladinLastingJudgement.iconPath = "Interface\\Icons\\Spell_holy_healingaura";
+
 --Tier 5
+TCalc_paladinHolyPower = {}
+TCalc_paladinHolyPower.maxPoints = 5;
+TCalc_paladinHolyPower.talentName = "Holy Power";
+TCalc_paladinHolyPower.resourceCost = nil;
+TCalc_paladinHolyPower.castCooldown = nil;
+TCalc_paladinHolyPower.requirements = nil;
+TCalc_paladinHolyPower.talentDescriptions = {};
+TCalc_paladinHolyPower.talentDescriptions[0] = "Increases the critical effect chance of your Holy spells by 1%.";
+TCalc_paladinHolyPower.talentDescriptions[1] = "Increases the critical effect chance of your Holy spells by 2%.";
+TCalc_paladinHolyPower.talentDescriptions[2] = "Increases the critical effect chance of your Holy spells by 3%.";
+TCalc_paladinHolyPower.talentDescriptions[3] = "Increases the critical effect chance of your Holy spells by 4%.";
+TCalc_paladinHolyPower.talentDescriptions[4] = "Increases the critical effect chance of your Holy spells by 5%.";
+TCalc_paladinHolyPower.parentTalent = nil;
+TCalc_paladinHolyPower.childTalent = nil;
+TCalc_paladinHolyPower.iconPath = "Interface\\Icons\\Spell_holy_power";
 
 --Tier 6
 TCalc_paladinHolyShock = {}
@@ -42,7 +203,7 @@ TCalc_paladinHolyShock.castCooldown = "Instant cast\t30 sec cooldown";
 TCalc_paladinHolyShock.requirements = nil;
 TCalc_paladinHolyShock.talentDescriptions = {};
 TCalc_paladinHolyShock.talentDescriptions[0] = "Blasts the target with Holy energy, causing 204 to 221 Holy damage to an enemy, or 204 to 221 healing to an ally.";
-TCalc_paladinHolyShock.parentTalent = nil;
+TCalc_paladinHolyShock.parentTalent = TCalc_paladinDivineFavor;
 TCalc_paladinHolyShock.childTalent = nil;
 TCalc_paladinHolyShock.iconPath = "Interface\\Icons\\Spell_holy_searinglight";
 
