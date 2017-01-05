@@ -4,7 +4,7 @@ TCalc_classFrameLevel = 0;
 TCalc_talentButtonLevel = 1;
 
 TCalc_talentsTopOffset = 80;
-TCalc_talentsLeftOffset = 30;
+TCalc_talentsLeftOffset = 40;
 TCalc_tierReqOffset = 30;
 
 TCalc_maxTalents = 51;
