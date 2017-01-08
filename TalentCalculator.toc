@@ -1,5 +1,5 @@
 ## Interface: 12100
-## Author: Guho
+## Author: Guho, Artany
 ## Title: Talent Calculator
 ## Notes: Provides an in-game facility to calculate talents. Allows to store and share created builds within your party/raid.
 ## Version: 1.0.0
