@@ -209,8 +209,81 @@ TCalc_paladinHolyShock.iconPath = "Interface\\Icons\\Spell_holy_searinglight";
 
 --Tab 1
 --Tier 0
+TCalc_paladinImprovedDevotionAura = {}
+TCalc_paladinImprovedDevotionAura.maxPoints = 5;
+TCalc_paladinImprovedDevotionAura.talentName = "Improved Devotion Aura";
+TCalc_paladinImprovedDevotionAura.resourceCost = nil;
+TCalc_paladinImprovedDevotionAura.castCooldown = nil;
+TCalc_paladinImprovedDevotionAura.requirements = nil;
+TCalc_paladinImprovedDevotionAura.talentDescriptions = {};
+TCalc_paladinImprovedDevotionAura.talentDescriptions[0] = "Increases the armor bonus of your Devotion Aura by 5%.";
+TCalc_paladinImprovedDevotionAura.talentDescriptions[1] = "Increases the armor bonus of your Devotion Aura by 10%.";
+TCalc_paladinImprovedDevotionAura.talentDescriptions[2] = "Increases the armor bonus of your Devotion Aura by 15%.";
+TCalc_paladinImprovedDevotionAura.talentDescriptions[3] = "Increases the armor bonus of your Devotion Aura by 20%.";
+TCalc_paladinImprovedDevotionAura.talentDescriptions[4] = "Increases the armor bonus of your Devotion Aura by 25%.";
+TCalc_paladinImprovedDevotionAura.parentTalent = nil;
+TCalc_paladinImprovedDevotionAura.childTalent = nil;
+TCalc_paladinImprovedDevotionAura.iconPath = "Interface\\Icons\\Spell_holy_devotionaura";
+
+TCalc_paladinRedoubt = {}
+TCalc_paladinRedoubt.maxPoints = 5;
+TCalc_paladinRedoubt.talentName = "Redoubt";
+TCalc_paladinRedoubt.resourceCost = nil;
+TCalc_paladinRedoubt.castCooldown = nil;
+TCalc_paladinRedoubt.requirements = nil;
+TCalc_paladinRedoubt.talentDescriptions = {};
+TCalc_paladinRedoubt.talentDescriptions[0] = "Increases your chance to block attacks with your shield by 6% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.";
+TCalc_paladinRedoubt.talentDescriptions[1] = "Increases your chance to block attacks with your shield by 12% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.";
+TCalc_paladinRedoubt.talentDescriptions[2] = "Increases your chance to block attacks with your shield by 18% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.";
+TCalc_paladinRedoubt.talentDescriptions[3] = "Increases your chance to block attacks with your shield by 24% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.";
+TCalc_paladinRedoubt.talentDescriptions[4] = "Increases your chance to block attacks with your shield by 30% after being the victim of a critical strike. Lasts 10 sec or 5 blocks.";
+TCalc_paladinRedoubt.parentTalent = nil;
+TCalc_paladinRedoubt.childTalent = TCalc_paladinShieldSpecialization;
+TCalc_paladinRedoubt.iconPath = "Interface\\Icons\\Ability_defend";
 
 --Tier 1
+TCalc_paladinPrecision = {}
+TCalc_paladinPrecision.maxPoints = 3;
+TCalc_paladinPrecision.talentName = "Precision";
+TCalc_paladinPrecision.resourceCost = nil;
+TCalc_paladinPrecision.castCooldown = nil;
+TCalc_paladinPrecision.requirements = nil;
+TCalc_paladinPrecision.talentDescriptions = {};
+TCalc_paladinPrecision.talentDescriptions[0] = "Increases your chance to hit with melee weapons by 1%.";
+TCalc_paladinPrecision.talentDescriptions[1] = "Increases your chance to hit with melee weapons by 2%.";
+TCalc_paladinPrecision.talentDescriptions[2] = "Increases your chance to hit with melee weapons by 3%.";
+TCalc_paladinPrecision.parentTalent = nil;
+TCalc_paladinPrecision.childTalent = nil;
+TCalc_paladinPrecision.iconPath = "Interface\\Icons\\Ability_rogue_ambush";
+
+TCalc_paladinGuardiansFavor = {}
+TCalc_paladinGuardiansFavor.maxPoints = 2;
+TCalc_paladinGuardiansFavor.talentName = "Guardian's Favor";
+TCalc_paladinGuardiansFavor.resourceCost = nil;
+TCalc_paladinGuardiansFavor.castCooldown = nil;
+TCalc_paladinGuardiansFavor.requirements = nil;
+TCalc_paladinGuardiansFavor.talentDescriptions = {};
+TCalc_paladinGuardiansFavor.talentDescriptions[0] = "Reduces the cooldown of your Blessing of Protection by 60 sec and increases the duration of your Blessing of Freedom by 3 sec.";
+TCalc_paladinGuardiansFavor.talentDescriptions[1] = "Reduces the cooldown of your Blessing of Protection by 120 sec and increases the duration of your Blessing of Freedom by 6 sec.";
+TCalc_paladinGuardiansFavor.parentTalent = nil;
+TCalc_paladinGuardiansFavor.childTalent = nil;
+TCalc_paladinGuardiansFavor.iconPath = "Interface\\Icons\\Spell_holy_sealofprotection";
+
+TCalc_paladinToughness = {}
+TCalc_paladinToughness.maxPoints = 5;
+TCalc_paladinToughness.talentName = "Toughness";
+TCalc_paladinToughness.resourceCost = nil;
+TCalc_paladinToughness.castCooldown = nil;
+TCalc_paladinToughness.requirements = nil;
+TCalc_paladinToughness.talentDescriptions = {};
+TCalc_paladinToughness.talentDescriptions[0] = "Increases your armor value from items by 2%.";
+TCalc_paladinToughness.talentDescriptions[1] = "Increases your armor value from items by 4%.";
+TCalc_paladinToughness.talentDescriptions[2] = "Increases your armor value from items by 6%.";
+TCalc_paladinToughness.talentDescriptions[3] = "Increases your armor value from items by 8%.";
+TCalc_paladinToughness.talentDescriptions[4] = "Increases your armor value from items by 10%.";
+TCalc_paladinToughness.parentTalent = nil;
+TCalc_paladinToughness.childTalent = nil;
+TCalc_paladinToughness.iconPath = "Interface\\Icons\\Spell_holy_devotion";
 
 --Tier 2
 TCalc_paladinBlessingOfKings = {}
@@ -225,7 +298,78 @@ TCalc_paladinBlessingOfKings.parentTalent = nil;
 TCalc_paladinBlessingOfKings.childTalent = nil;
 TCalc_paladinBlessingOfKings.iconPath = "Interface\\Icons\\Spell_magic_magearmor";
 
+TCalc_paladinImprovedRighteousFury = {}
+TCalc_paladinImprovedRighteousFury.maxPoints = 3;
+TCalc_paladinImprovedRighteousFury.talentName = "Improved Righteous Fury";
+TCalc_paladinImprovedRighteousFury.resourceCost = nil;
+TCalc_paladinImprovedRighteousFury.castCooldown = nil;
+TCalc_paladinImprovedRighteousFury.requirements = nil;
+TCalc_paladinImprovedRighteousFury.talentDescriptions = {};
+TCalc_paladinImprovedRighteousFury.talentDescriptions[0] = "Increases your armor value from items by 16%.";
+TCalc_paladinImprovedRighteousFury.talentDescriptions[1] = "Increases your armor value from items by 33%.";
+TCalc_paladinImprovedRighteousFury.talentDescriptions[2] = "Increases your armor value from items by 50%.";
+TCalc_paladinImprovedRighteousFury.parentTalent = nil;
+TCalc_paladinImprovedRighteousFury.childTalent = nil;
+TCalc_paladinImprovedRighteousFury.iconPath = "Interface\\Icons\\Spell_holy_sealoffury";
+
+TCalc_paladinShieldSpecialization = {}
+TCalc_paladinShieldSpecialization.maxPoints = 3;
+TCalc_paladinShieldSpecialization.talentName = "Shield Specialization";
+TCalc_paladinShieldSpecialization.resourceCost = nil;
+TCalc_paladinShieldSpecialization.castCooldown = nil;
+TCalc_paladinShieldSpecialization.requirements = nil;
+TCalc_paladinShieldSpecialization.talentDescriptions = {};
+TCalc_paladinShieldSpecialization.talentDescriptions[0] = "Increases the amount of damage absorbed by your shield by 10%.";
+TCalc_paladinShieldSpecialization.talentDescriptions[1] = "Increases the amount of damage absorbed by your shield by 20%.";
+TCalc_paladinShieldSpecialization.talentDescriptions[2] = "Increases the amount of damage absorbed by your shield by 30%.";
+TCalc_paladinShieldSpecialization.parentTalent = TCalc_paladinRedoubt;
+TCalc_paladinShieldSpecialization.childTalent = nil;
+TCalc_paladinShieldSpecialization.iconPath = "Interface\\Icons\\Inv_shield_06";
+
+TCalc_paladinAnticipation = {}
+TCalc_paladinAnticipation.maxPoints = 5;
+TCalc_paladinAnticipation.talentName = "Anticipation";
+TCalc_paladinAnticipation.resourceCost = nil;
+TCalc_paladinAnticipation.castCooldown = nil;
+TCalc_paladinAnticipation.requirements = nil;
+TCalc_paladinAnticipation.talentDescriptions = {};
+TCalc_paladinAnticipation.talentDescriptions[0] = "Increases your Defense skill by 2.";
+TCalc_paladinAnticipation.talentDescriptions[1] = "Increases your Defense skill by 4.";
+TCalc_paladinAnticipation.talentDescriptions[2] = "Increases your Defense skill by 6.";
+TCalc_paladinAnticipation.talentDescriptions[3] = "Increases your Defense skill by 8.";
+TCalc_paladinAnticipation.talentDescriptions[4] = "Increases your Defense skill by 10.";
+TCalc_paladinAnticipation.parentTalent = nil;
+TCalc_paladinAnticipation.childTalent = nil;
+TCalc_paladinAnticipation.iconPath = "Interface\\Icons\\Spell_magic_lesserinvisibilty";
+
 --Tier 3
+TCalc_paladinImprovedHammerOfJustice = {}
+TCalc_paladinImprovedHammerOfJustice.maxPoints = 3;
+TCalc_paladinImprovedHammerOfJustice.talentName = "Improved Hammer of Justice";
+TCalc_paladinImprovedHammerOfJustice.resourceCost = nil;
+TCalc_paladinImprovedHammerOfJustice.castCooldown = nil;
+TCalc_paladinImprovedHammerOfJustice.requirements = nil;
+TCalc_paladinImprovedHammerOfJustice.talentDescriptions = {};
+TCalc_paladinImprovedHammerOfJustice.talentDescriptions[0] = "Decreases the cooldown of your Hammer of Justice spell by 5 sec.";
+TCalc_paladinImprovedHammerOfJustice.talentDescriptions[1] = "Decreases the cooldown of your Hammer of Justice spell by 10 sec.";
+TCalc_paladinImprovedHammerOfJustice.talentDescriptions[2] = "Decreases the cooldown of your Hammer of Justice spell by 15 sec.";
+TCalc_paladinImprovedHammerOfJustice.parentTalent = nil;
+TCalc_paladinImprovedHammerOfJustice.childTalent = nil;
+TCalc_paladinImprovedHammerOfJustice.iconPath = "Interface\\Icons\\Spell_holy_sealofmight";
+
+TCalc_paladinImprovedConcentrationAura = {}
+TCalc_paladinImprovedConcentrationAura.maxPoints = 3;
+TCalc_paladinImprovedConcentrationAura.talentName = "Improved Concentration Aura";
+TCalc_paladinImprovedConcentrationAura.resourceCost = nil;
+TCalc_paladinImprovedConcentrationAura.castCooldown = nil;
+TCalc_paladinImprovedConcentrationAura.requirements = nil;
+TCalc_paladinImprovedConcentrationAura.talentDescriptions = {};
+TCalc_paladinImprovedConcentrationAura.talentDescriptions[0] = "Increases the effect of your Concentration Aura by an additional 5% and gives all group members affected by the aura an additional 5% chance to resist Silence and Interrupt effects.";
+TCalc_paladinImprovedConcentrationAura.talentDescriptions[1] = "Increases the effect of your Concentration Aura by an additional 10% and gives all group members affected by the aura an additional 10% chance to resist Silence and Interrupt effects.";
+TCalc_paladinImprovedConcentrationAura.talentDescriptions[2] = "Increases the effect of your Concentration Aura by an additional 15% and gives all group members affected by the aura an additional 15% chance to resist Silence and Interrupt effects.";
+TCalc_paladinImprovedConcentrationAura.parentTalent = nil;
+TCalc_paladinImprovedConcentrationAura.childTalent = nil;
+TCalc_paladinImprovedConcentrationAura.iconPath = "Interface\\Icons\\Spell_holy_mindsooth";
 
 --Tier 4
 TCalc_paladinBlessingOfSanctuary = {}
@@ -237,10 +381,41 @@ TCalc_paladinBlessingOfSanctuary.requirements = nil;
 TCalc_paladinBlessingOfSanctuary.talentDescriptions = {};
 TCalc_paladinBlessingOfSanctuary.talentDescriptions[0] = "Places a Blessing on the friendly target, reducing damage dealt from all sources by up to 10 for 5 min. In addition, when the target blocks a melee attack the attacker will take 14 Holy damage. Players may only have one Blessing on them per Paladin at any one time.";
 TCalc_paladinBlessingOfSanctuary.parentTalent = nil;
-TCalc_paladinBlessingOfSanctuary.childTalent = nil;
+TCalc_paladinBlessingOfSanctuary.childTalent = TCalc_paladinHolyShield;
 TCalc_paladinBlessingOfSanctuary.iconPath = "Interface\\Icons\\Spell_nature_lightningshield";
 
+TCalc_paladinReckoning = {}
+TCalc_paladinReckoning.maxPoints = 5;
+TCalc_paladinReckoning.talentName = "Reckoning";
+TCalc_paladinReckoning.resourceCost = nil;
+TCalc_paladinReckoning.castCooldown = nil;
+TCalc_paladinReckoning.requirements = nil;
+TCalc_paladinReckoning.talentDescriptions = {};
+TCalc_paladinReckoning.talentDescriptions[0] = "Gives you a 20% chance to gain an extra attack after being the victim of a critical strike.";
+TCalc_paladinReckoning.talentDescriptions[1] = "Gives you a 40% chance to gain an extra attack after being the victim of a critical strike.";
+TCalc_paladinReckoning.talentDescriptions[2] = "Gives you a 60% chance to gain an extra attack after being the victim of a critical strike.";
+TCalc_paladinReckoning.talentDescriptions[3] = "Gives you a 80% chance to gain an extra attack after being the victim of a critical strike.";
+TCalc_paladinReckoning.talentDescriptions[4] = "Gives you a 100% chance to gain an extra attack after being the victim of a critical strike.";
+TCalc_paladinReckoning.parentTalent = nil;
+TCalc_paladinReckoning.childTalent = nil;
+TCalc_paladinReckoning.iconPath = "Interface\\Icons\\Spell_holy_blessingofstrength";
+
 --Tier 5
+TCalc_paladinOneHandedWeaponSpecialization = {}
+TCalc_paladinOneHandedWeaponSpecialization.maxPoints = 5;
+TCalc_paladinOneHandedWeaponSpecialization.talentName = "One-Handed Weapon Specialization";
+TCalc_paladinOneHandedWeaponSpecialization.resourceCost = nil;
+TCalc_paladinOneHandedWeaponSpecialization.castCooldown = nil;
+TCalc_paladinOneHandedWeaponSpecialization.requirements = nil;
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions = {};
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions[0] = "Increases the damage you deal with one-handed melee weapons by 2%.";
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions[1] = "Increases the damage you deal with one-handed melee weapons by 4%.";
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions[2] = "Increases the damage you deal with one-handed melee weapons by 6%.";
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions[3] = "Increases the damage you deal with one-handed melee weapons by 8%.";
+TCalc_paladinOneHandedWeaponSpecialization.talentDescriptions[4] = "Increases the damage you deal with one-handed melee weapons by 10%.";
+TCalc_paladinOneHandedWeaponSpecialization.parentTalent = nil;
+TCalc_paladinOneHandedWeaponSpecialization.childTalent = nil;
+TCalc_paladinOneHandedWeaponSpecialization.iconPath = "Interface\\Icons\\Inv_sword_20";
 
 --Tier 6
 TCalc_paladinHolyShield = {}
@@ -251,17 +426,120 @@ TCalc_paladinHolyShield.castCooldown = "Instant cast\t10 sec cooldown";
 TCalc_paladinHolyShield.requirements = nil;
 TCalc_paladinHolyShield.talentDescriptions = {};
 TCalc_paladinHolyShield.talentDescriptions[0] = "Increases chance to block by 30% for 10 sec, and deals 65 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges.";
-TCalc_paladinHolyShield.parentTalent = nil;
+TCalc_paladinHolyShield.parentTalent = TCalc_paladinBlessingOfSanctuary;
 TCalc_paladinHolyShield.childTalent = nil;
 TCalc_paladinHolyShield.iconPath = "Interface\\Icons\\Spell_holy_blessingofprotection";
 
 
 --Tab 2
 --Tier 0
+TCalc_paladinImprovedBlessingOfMight = {}
+TCalc_paladinImprovedBlessingOfMight.maxPoints = 5;
+TCalc_paladinImprovedBlessingOfMight.talentName = "Improved Blessing of Might";
+TCalc_paladinImprovedBlessingOfMight.resourceCost = nil;
+TCalc_paladinImprovedBlessingOfMight.castCooldown = nil;
+TCalc_paladinImprovedBlessingOfMight.requirements = nil;
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions = {};
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions[0] = "Increases the melee attack power bonus of your Blessing of Might by 4%.";
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions[1] = "Increases the melee attack power bonus of your Blessing of Might by 8%.";
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions[2] = "Increases the melee attack power bonus of your Blessing of Might by 12%.";
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions[3] = "Increases the melee attack power bonus of your Blessing of Might by 16%.";
+TCalc_paladinImprovedBlessingOfMight.talentDescriptions[4] = "Increases the melee attack power bonus of your Blessing of Might by 20%.";
+TCalc_paladinImprovedBlessingOfMight.parentTalent = nil;
+TCalc_paladinImprovedBlessingOfMight.childTalent = nil;
+TCalc_paladinImprovedBlessingOfMight.iconPath = "Interface\\Icons\\Spell_holy_fistofjustice";
+
+TCalc_paladinBenediction = {}
+TCalc_paladinBenediction.maxPoints = 5;
+TCalc_paladinBenediction.talentName = "Benediction";
+TCalc_paladinBenediction.resourceCost = nil;
+TCalc_paladinBenediction.castCooldown = nil;
+TCalc_paladinBenediction.requirements = nil;
+TCalc_paladinBenediction.talentDescriptions = {};
+TCalc_paladinBenediction.talentDescriptions[0] = "Reduces the Mana cost of your Judgement and Seal spells by 3%.";
+TCalc_paladinBenediction.talentDescriptions[1] = "Reduces the Mana cost of your Judgement and Seal spells by 6%.";
+TCalc_paladinBenediction.talentDescriptions[2] = "Reduces the Mana cost of your Judgement and Seal spells by 9%.";
+TCalc_paladinBenediction.talentDescriptions[3] = "Reduces the Mana cost of your Judgement and Seal spells by 12%.";
+TCalc_paladinBenediction.talentDescriptions[4] = "Reduces the Mana cost of your Judgement and Seal spells by 15%.";
+TCalc_paladinBenediction.parentTalent = nil;
+TCalc_paladinBenediction.childTalent = nil;
+TCalc_paladinBenediction.iconPath = "Interface\\Icons\\Spell_frost_windwalkon";
 
 --Tier 1
+TCalc_paladinImprovedJudgement = {}
+TCalc_paladinImprovedJudgement.maxPoints = 2;
+TCalc_paladinImprovedJudgement.talentName = "Improved Judgement";
+TCalc_paladinImprovedJudgement.resourceCost = nil;
+TCalc_paladinImprovedJudgement.castCooldown = nil;
+TCalc_paladinImprovedJudgement.requirements = nil;
+TCalc_paladinImprovedJudgement.talentDescriptions = {};
+TCalc_paladinImprovedJudgement.talentDescriptions[0] = "Decreases the cooldown of your Judgement spell by 1 sec.";
+TCalc_paladinImprovedJudgement.talentDescriptions[1] = "Decreases the cooldown of your Judgement spell by 2 sec.";
+TCalc_paladinImprovedJudgement.parentTalent = nil;
+TCalc_paladinImprovedJudgement.childTalent = nil;
+TCalc_paladinImprovedJudgement.iconPath = "Interface\\Icons\\spell_holy_righteousfury";
+
+TCalc_paladinImprovedSealOfTheCrusader = {}
+TCalc_paladinImprovedSealOfTheCrusader.maxPoints = 3;
+TCalc_paladinImprovedSealOfTheCrusader.talentName = "Improved Seal of the Crusader";
+TCalc_paladinImprovedSealOfTheCrusader.resourceCost = nil;
+TCalc_paladinImprovedSealOfTheCrusader.castCooldown = nil;
+TCalc_paladinImprovedSealOfTheCrusader.requirements = nil;
+TCalc_paladinImprovedSealOfTheCrusader.talentDescriptions = {};
+TCalc_paladinImprovedSealOfTheCrusader.talentDescriptions[0] = "Increases the damage you deal with one-handed melee weapons by 2%.";
+TCalc_paladinImprovedSealOfTheCrusader.talentDescriptions[1] = "Increases the damage you deal with one-handed melee weapons by 4%.";
+TCalc_paladinImprovedSealOfTheCrusader.talentDescriptions[2] = "Increases the damage you deal with one-handed melee weapons by 6%.";
+TCalc_paladinImprovedSealOfTheCrusader.parentTalent = nil;
+TCalc_paladinImprovedSealOfTheCrusader.childTalent = nil;
+TCalc_paladinImprovedSealOfTheCrusader.iconPath = "Interface\\Icons\\spell_holy_holysmite";
+
+TCalc_paladinDeflection = {}
+TCalc_paladinDeflection.maxPoints = 5;
+TCalc_paladinDeflection.talentName = "Deflection";
+TCalc_paladinDeflection.resourceCost = nil;
+TCalc_paladinDeflection.castCooldown = nil;
+TCalc_paladinDeflection.requirements = nil;
+TCalc_paladinDeflection.talentDescriptions = {};
+TCalc_paladinDeflection.talentDescriptions[0] = "Increases your Parry chance by 1%.";
+TCalc_paladinDeflection.talentDescriptions[1] = "Increases your Parry chance by 2%.";
+TCalc_paladinDeflection.talentDescriptions[2] = "Increases your Parry chance by 3%.";
+TCalc_paladinDeflection.talentDescriptions[3] = "Increases your Parry chance by 4%.";
+TCalc_paladinDeflection.talentDescriptions[4] = "Increases your Parry chance by 5%.";
+TCalc_paladinDeflection.parentTalent = nil;
+TCalc_paladinDeflection.childTalent = nil;
+TCalc_paladinDeflection.iconPath = "Interface\\Icons\\Ability_parry";
 
 --Tier 2
+TCalc_paladinVindication = {}
+TCalc_paladinVindication.maxPoints = 3;
+TCalc_paladinVindication.talentName = "Vindication";
+TCalc_paladinVindication.resourceCost = nil;
+TCalc_paladinVindication.castCooldown = nil;
+TCalc_paladinVindication.requirements = nil;
+TCalc_paladinVindication.talentDescriptions = {};
+TCalc_paladinVindication.talentDescriptions[0] = "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 5% for 10 sec.";
+TCalc_paladinVindication.talentDescriptions[1] = "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 10% for 10 sec.";
+TCalc_paladinVindication.talentDescriptions[2] = "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 15% for 10 sec.";
+TCalc_paladinVindication.parentTalent = nil;
+TCalc_paladinVindication.childTalent = nil;
+TCalc_paladinVindication.iconPath = "Interface\\Icons\\Spell_holy_vindication";
+
+TCalc_paladinConviction = {}
+TCalc_paladinConviction.maxPoints = 5;
+TCalc_paladinConviction.talentName = "Conviction";
+TCalc_paladinConviction.resourceCost = nil;
+TCalc_paladinConviction.castCooldown = nil;
+TCalc_paladinConviction.requirements = nil;
+TCalc_paladinConviction.talentDescriptions = {};
+TCalc_paladinConviction.talentDescriptions[0] = "Increases your chance to get a critical strike with melee weapons by 1%.";
+TCalc_paladinConviction.talentDescriptions[1] = "Increases your chance to get a critical strike with melee weapons by 2%.";
+TCalc_paladinConviction.talentDescriptions[2] = "Increases your chance to get a critical strike with melee weapons by 3%.";
+TCalc_paladinConviction.talentDescriptions[3] = "Increases your chance to get a critical strike with melee weapons by 4%.";
+TCalc_paladinConviction.talentDescriptions[4] = "Increases your chance to get a critical strike with melee weapons by 5%.";
+TCalc_paladinConviction.parentTalent = nil;
+TCalc_paladinConviction.childTalent = TCalc_paladinRepentance;
+TCalc_paladinConviction.iconPath = "Interface\\Icons\\spell_holy_retributionaura";
+
 TCalc_paladinSealOfCommand = {}
 TCalc_paladinSealOfCommand.maxPoints = 1;
 TCalc_paladinSealOfCommand.talentName = "Seal of Command";
@@ -274,9 +552,61 @@ TCalc_paladinSealOfCommand.parentTalent = nil;
 TCalc_paladinSealOfCommand.childTalent = nil;
 TCalc_paladinSealOfCommand.iconPath = "Interface\\Icons\\Ability_warrior_innerrage";
 
+TCalc_paladinPursuitOfJustice = {}
+TCalc_paladinPursuitOfJustice.maxPoints = 2;
+TCalc_paladinPursuitOfJustice.talentName = "Pursuit of Justice";
+TCalc_paladinPursuitOfJustice.resourceCost = nil;
+TCalc_paladinPursuitOfJustice.castCooldown = nil;
+TCalc_paladinPursuitOfJustice.requirements = nil;
+TCalc_paladinPursuitOfJustice.talentDescriptions = {};
+TCalc_paladinPursuitOfJustice.talentDescriptions[0] = "Increases movement and mounted movement speed by 4%. This does not stack with other movement speed increasing effects.";
+TCalc_paladinPursuitOfJustice.talentDescriptions[1] = "Increases movement and mounted movement speed by 8%. This does not stack with other movement speed increasing effects.";
+TCalc_paladinPursuitOfJustice.parentTalent = nil;
+TCalc_paladinPursuitOfJustice.childTalent = nil;
+TCalc_paladinPursuitOfJustice.iconPath = "Interface\\Icons\\Spell_holy_persuitofjustice";
+
 --Tier 3
+TCalc_paladinEyeForAnEye = {}
+TCalc_paladinEyeForAnEye.maxPoints = 2;
+TCalc_paladinEyeForAnEye.talentName = "Eye for an Eye";
+TCalc_paladinEyeForAnEye.resourceCost = nil;
+TCalc_paladinEyeForAnEye.castCooldown = nil;
+TCalc_paladinEyeForAnEye.requirements = nil;
+TCalc_paladinEyeForAnEye.talentDescriptions = {};
+TCalc_paladinEyeForAnEye.talentDescriptions[0] = "All spell criticals against you cause 15% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.";
+TCalc_paladinEyeForAnEye.talentDescriptions[1] = "All spell criticals against you cause 30% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.";
+TCalc_paladinEyeForAnEye.parentTalent = nil;
+TCalc_paladinEyeForAnEye.childTalent = nil;
+TCalc_paladinEyeForAnEye.iconPath = "Interface\\Icons\\Spell_holy_eyeforaneye";
+
+TCalc_paladinImprovedRetributionAura = {}
+TCalc_paladinImprovedRetributionAura.maxPoints = 2;
+TCalc_paladinImprovedRetributionAura.talentName = "Improved Retribution Aura";
+TCalc_paladinImprovedRetributionAura.resourceCost = nil;
+TCalc_paladinImprovedRetributionAura.castCooldown = nil;
+TCalc_paladinImprovedRetributionAura.requirements = nil;
+TCalc_paladinImprovedRetributionAura.talentDescriptions = {};
+TCalc_paladinImprovedRetributionAura.talentDescriptions[0] = "Increases the damage done by your Retribution Aura by 25%.";
+TCalc_paladinImprovedRetributionAura.talentDescriptions[1] = "Increases the damage done by your Retribution Aura by 50%.";
+TCalc_paladinImprovedRetributionAura.parentTalent = nil;
+TCalc_paladinImprovedRetributionAura.childTalent = nil;
+TCalc_paladinImprovedRetributionAura.iconPath = "Interface\\Icons\\Spell_holy_auraoflight";
 
 --Tier 4
+TCalc_paladinTwoHandedWeaponSpecialization = {}
+TCalc_paladinTwoHandedWeaponSpecialization.maxPoints = 3;
+TCalc_paladinTwoHandedWeaponSpecialization.talentName = "Two-Handed Weapon Specialization";
+TCalc_paladinTwoHandedWeaponSpecialization.resourceCost = nil;
+TCalc_paladinTwoHandedWeaponSpecialization.castCooldown = nil;
+TCalc_paladinTwoHandedWeaponSpecialization.requirements = nil;
+TCalc_paladinTwoHandedWeaponSpecialization.talentDescriptions = {};
+TCalc_paladinTwoHandedWeaponSpecialization.talentDescriptions[0] = "Increases the damage you deal with two-handed melee weapons by 2%.";
+TCalc_paladinTwoHandedWeaponSpecialization.talentDescriptions[1] = "Increases the damage you deal with two-handed melee weapons by 4%.";
+TCalc_paladinTwoHandedWeaponSpecialization.talentDescriptions[2] = "Increases the damage you deal with two-handed melee weapons by 6%.";
+TCalc_paladinTwoHandedWeaponSpecialization.parentTalent = nil;
+TCalc_paladinTwoHandedWeaponSpecialization.childTalent = nil;
+TCalc_paladinTwoHandedWeaponSpecialization.iconPath = "Interface\\Icons\\Inv_hammer_04";
+
 TCalc_paladinSanctityAura = {}
 TCalc_paladinSanctityAura.maxPoints = 1;
 TCalc_paladinSanctityAura.talentName = "Sanctity Aura";
@@ -290,6 +620,21 @@ TCalc_paladinSanctityAura.childTalent = nil;
 TCalc_paladinSanctityAura.iconPath = "Interface\\Icons\\Spell_holy_mindvision";
 
 --Tier 5
+TCalc_paladinVengeance = {}
+TCalc_paladinVengeance.maxPoints = 5;
+TCalc_paladinVengeance.talentName = "Vengeance";
+TCalc_paladinVengeance.resourceCost = nil;
+TCalc_paladinVengeance.castCooldown = nil;
+TCalc_paladinVengeance.requirements = nil;
+TCalc_paladinVengeance.talentDescriptions = {};
+TCalc_paladinVengeance.talentDescriptions[0] = "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
+TCalc_paladinVengeance.talentDescriptions[1] = "Gives you a 6% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
+TCalc_paladinVengeance.talentDescriptions[2] = "Gives you a 9% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
+TCalc_paladinVengeance.talentDescriptions[3] = "Gives you a 12% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
+TCalc_paladinVengeance.talentDescriptions[4] = "Gives you a 15% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
+TCalc_paladinVengeance.parentTalent = nil;
+TCalc_paladinVengeance.childTalent = nil;
+TCalc_paladinVengeance.iconPath = "Interface\\Icons\\ability_racial_avatar";
 
 --Tier 6
 TCalc_paladinRepentance = {}
@@ -300,6 +645,6 @@ TCalc_paladinRepentance.castCooldown = "Instant cast\t1 min cooldown";
 TCalc_paladinRepentance.requirements = nil;
 TCalc_paladinRepentance.talentDescriptions = {};
 TCalc_paladinRepentance.talentDescriptions[0] = "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.";
-TCalc_paladinRepentance.parentTalent = nil;
+TCalc_paladinRepentance.parentTalent = TCalc_paladinConviction;
 TCalc_paladinRepentance.childTalent = nil;
 TCalc_paladinRepentance.iconPath = "Interface\\Icons\\Spell_holy_prayerofhealing";

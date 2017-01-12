@@ -105,35 +105,108 @@ function TCalc_InitPaladinTalentButtons()
 
     --Tab 1
     --Tier 0
+    local improvedDevotionAura = TCalc_CreateTalentButton(TCalc_paladinImprovedDevotionAura, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedDevotionAura, 1, 0, 1, TCalc_PaladinFrame);
+    
+    local redoubt = TCalc_CreateTalentButton(TCalc_paladinRedoubt, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(redoubt, 1, 0, 2, TCalc_PaladinFrame);
 
     --Tier 1
+    local precision = TCalc_CreateTalentButton(TCalc_paladinPrecision, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(precision, 1, 1, 0, TCalc_PaladinFrame);
+    
+    local guardiansFavor = TCalc_CreateTalentButton(TCalc_paladinGuardiansFavor, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(guardiansFavor, 1, 1, 1, TCalc_PaladinFrame);
+    
+    local toughness = TCalc_CreateTalentButton(TCalc_paladinToughness, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(toughness, 1, 1, 3, TCalc_PaladinFrame);
 
     --Tier 2
-
+    local blessingOfKings = TCalc_CreateTalentButton(TCalc_paladinBlessingOfKings, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(blessingOfKings, 1, 2, 0, TCalc_PaladinFrame);
+    
+    local improvedRighteousFury = TCalc_CreateTalentButton(TCalc_paladinImprovedRighteousFury, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedRighteousFury, 1, 2, 1, TCalc_PaladinFrame);
+    
+    local shieldSpecialization = TCalc_CreateTalentButton(TCalc_paladinShieldSpecialization, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(shieldSpecialization, 1, 2, 2, TCalc_PaladinFrame);
+    
+    local anticipation = TCalc_CreateTalentButton(TCalc_paladinAnticipation, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(anticipation, 1, 2, 3, TCalc_PaladinFrame);
 
     --Tier 3
+    local improvedHammerOfJustice = TCalc_CreateTalentButton(TCalc_paladinImprovedHammerOfJustice, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedHammerOfJustice, 1, 3, 1, TCalc_PaladinFrame);
+    
+    local improvedConcentrationAura = TCalc_CreateTalentButton(TCalc_paladinImprovedConcentrationAura, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedConcentrationAura, 1, 3, 2, TCalc_PaladinFrame);
 
     --Tier 4
+    local blessingOfSanctuary = TCalc_CreateTalentButton(TCalc_paladinBlessingOfSanctuary, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(blessingOfSanctuary, 1, 4, 1, TCalc_PaladinFrame);
+    
+    local reckoning = TCalc_CreateTalentButton(TCalc_paladinReckoning, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(reckoning, 1, 4, 2, TCalc_PaladinFrame);
 
     --Tier 5
+    local oneHandedWeaponSpecialization = TCalc_CreateTalentButton(TCalc_paladinOneHandedWeaponSpecialization, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(oneHandedWeaponSpecialization, 1, 5, 2, TCalc_PaladinFrame);
 
     --Tier 6
+    local holyShield = TCalc_CreateTalentButton(TCalc_paladinHolyShield, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(holyShield, 1, 6, 1, TCalc_PaladinFrame);
 
     
     --Tab 2
     --Tier 0
+    local improvedBlessingOfMight = TCalc_CreateTalentButton(TCalc_paladinImprovedBlessingOfMight, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedBlessingOfMight, 2, 0, 1, TCalc_PaladinFrame);
+    
+    local benediction = TCalc_CreateTalentButton(TCalc_paladinBenediction, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(benediction, 2, 0, 2, TCalc_PaladinFrame);
 
     --Tier 1
+    local improvedJudgement = TCalc_CreateTalentButton(TCalc_paladinImprovedJudgement, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedJudgement, 2, 1, 0, TCalc_PaladinFrame);
+    
+    local improvedSealOfTheCrusader = TCalc_CreateTalentButton(TCalc_paladinImprovedSealOfTheCrusader, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedSealOfTheCrusader, 2, 1, 1, TCalc_PaladinFrame);
+    
+    local deflection = TCalc_CreateTalentButton(TCalc_paladinDeflection, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(deflection, 2, 1, 2, TCalc_PaladinFrame);
 
     --Tier 2
-    local sealOfCommandTalentButton = TCalc_CreateTalentButton(TCalc_paladinSealOfCommand, TCalc_PaladinFrame);
-    TCalc_AddTalentButton(sealOfCommandTalentButton, 2, 2, 2, TCalc_PaladinFrame);
+    local vindication = TCalc_CreateTalentButton(TCalc_paladinVindication, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(vindication, 2, 2, 0, TCalc_PaladinFrame);
+    
+    local conviction = TCalc_CreateTalentButton(TCalc_paladinConviction, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(conviction, 2, 2, 1, TCalc_PaladinFrame);
+    
+    local sealOfCommand = TCalc_CreateTalentButton(TCalc_paladinSealOfCommand, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(sealOfCommand, 2, 2, 2, TCalc_PaladinFrame);
+    
+    local pursuitOfJustice = TCalc_CreateTalentButton(TCalc_paladinPursuitOfJustice, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(pursuitOfJustice, 2, 2, 3, TCalc_PaladinFrame);
     
     --Tier 3
+    local eyeForAnEye = TCalc_CreateTalentButton(TCalc_paladinEyeForAnEye, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(eyeForAnEye, 2, 3, 0, TCalc_PaladinFrame);
+    
+    local improvedRetributionAura = TCalc_CreateTalentButton(TCalc_paladinImprovedRetributionAura, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(improvedRetributionAura, 2, 3, 2, TCalc_PaladinFrame);
 
     --Tier 4
+    local twoHandedWeaponSpecialization = TCalc_CreateTalentButton(TCalc_paladinTwoHandedWeaponSpecialization, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(twoHandedWeaponSpecialization, 2, 4, 0, TCalc_PaladinFrame);
+    
+    local sanctityAura = TCalc_CreateTalentButton(TCalc_paladinSanctityAura, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(sanctityAura, 2, 4, 2, TCalc_PaladinFrame);
 
     --Tier 5
+    local vengeance = TCalc_CreateTalentButton(TCalc_paladinVengeance, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(vengeance, 2, 5, 1, TCalc_PaladinFrame);
 
     --Tier 6
+    local repentance = TCalc_CreateTalentButton(TCalc_paladinRepentance, TCalc_PaladinFrame);
+    TCalc_AddTalentButton(repentance, 2, 6, 1, TCalc_PaladinFrame);
 end
