@@ -537,7 +537,7 @@ TCalc_paladinConviction.talentDescriptions[2] = "Increases your chance to get a 
 TCalc_paladinConviction.talentDescriptions[3] = "Increases your chance to get a critical strike with melee weapons by 4%.";
 TCalc_paladinConviction.talentDescriptions[4] = "Increases your chance to get a critical strike with melee weapons by 5%.";
 TCalc_paladinConviction.parentTalent = nil;
-TCalc_paladinConviction.childTalent = TCalc_paladinRepentance;
+TCalc_paladinConviction.childTalent = TCalc_paladinVengeance;
 TCalc_paladinConviction.iconPath = "Interface\\Icons\\spell_holy_retributionaura";
 
 TCalc_paladinSealOfCommand = {}
@@ -632,7 +632,7 @@ TCalc_paladinVengeance.talentDescriptions[1] = "Gives you a 6% bonus to Physical
 TCalc_paladinVengeance.talentDescriptions[2] = "Gives you a 9% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
 TCalc_paladinVengeance.talentDescriptions[3] = "Gives you a 12% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
 TCalc_paladinVengeance.talentDescriptions[4] = "Gives you a 15% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.";
-TCalc_paladinVengeance.parentTalent = nil;
+TCalc_paladinVengeance.parentTalent = TCalc_paladinConviction;
 TCalc_paladinVengeance.childTalent = nil;
 TCalc_paladinVengeance.iconPath = "Interface\\Icons\\ability_racial_avatar";
 
@@ -645,6 +645,6 @@ TCalc_paladinRepentance.castCooldown = "Instant cast\t1 min cooldown";
 TCalc_paladinRepentance.requirements = nil;
 TCalc_paladinRepentance.talentDescriptions = {};
 TCalc_paladinRepentance.talentDescriptions[0] = "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids.";
-TCalc_paladinRepentance.parentTalent = TCalc_paladinConviction;
+TCalc_paladinRepentance.parentTalent = nil;
 TCalc_paladinRepentance.childTalent = nil;
 TCalc_paladinRepentance.iconPath = "Interface\\Icons\\Spell_holy_prayerofhealing";
