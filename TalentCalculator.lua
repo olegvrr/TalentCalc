@@ -43,6 +43,7 @@ TCalc_nameWaiting = nil;
 
 TCalc_inspectRequestCode = "ireq";
 TCalc_inspectResponseCode = "ires";
+TCalc_talentShareCode = "tsha";
 
 function TCalc_OnLoad()
     this:RegisterEvent("ADDON_LOADED");
@@ -86,13 +87,20 @@ function TCalc_ProcessMessage(targetMessage, sender, channel)
     end
 
     if (code == TCalc_inspectResponseCode and sender == TCalc_nameWaiting) then
-        local classNumber = tonumber(string.sub(targetMessage, 5, 5));
-        local targetFrame = TCalc_frames[classNumber];
+        local classIndex = tonumber(string.sub(targetMessage, 5, 5));
+        local targetFrame = TCalc_frames[classIndex];
         TCalc_SwitchFrame(targetFrame);
         local talentString = string.sub(targetMessage, 6, messageLength);
         TCalc_DisplayTalentsFromString(talentString);
         TCalc_activeFrame.talentNameLabel:SetText(sender);
     end
+	
+	if (code == TCalc_talentShareCode) then
+		local classIndex = tonumber(string.sub(targetMessage, 5, 5));
+		local talentString = string.sub(targetMessage, 6, messageLength);
+		TCalc_AccpetSharedTalents(classIndex, talentString, sender);
+	end
+    
 end
 
 function TCalc_DisplayTalentsFromString(talentString)
@@ -122,13 +130,52 @@ function TCalc_AnswerTalentRequest(channel)
     local resultMessage = TCalc_inspectResponseCode .. TCalc_classNameToIndex[UnitClass('player')];
     
     for tabIndex = 1, 3 do
-        local numLatents = GetNumTalents(tabIndex);
-        for talentIndex = 1, numLatents do
+        local numTalents = GetNumTalents(tabIndex);
+        for talentIndex = 1, numTalents do
             _, _, _, _, points = GetTalentInfo(tabIndex, talentIndex);
             resultMessage = resultMessage .. points;
         end
     end
     TCalc_SendMessage(TCalc_commsIndex, resultMessage, channel);
+end
+
+function TCalc_GetTalentStringForActiveFrame()
+    if(TCalc_activeFrame == nil) then
+        return;
+    end
+    
+    local activeTabs = TCalc_activeFrame.tabs;
+    local talentString = "";
+	
+    for i=0, 2 do
+        local currentActiveTab = activeTabs[i];
+        for j=0, 6 do
+            local currentActiveTier = currentActiveTab.tiers[j];
+            for k = 0, 3 do
+                if(currentActiveTier[k] ~= nil)then
+                    talentString = talentString .. currentActiveTier[k].currentPoints;
+                end
+            end
+        end
+    end
+	return talentString;
+end
+
+function TCalc_ShareActiveFrameTalents()
+
+	local talentString = TCalc_GetTalentStringForActiveFrame();
+	local activeClassIdentificator;
+	
+	for i=0,8 do
+		if (TCalc_frames[i] == TCalc_activeFrame) then
+			activeClassIdentificator = i;
+		end
+	end
+	
+	local resultMessage = TCalc_talentShareCode .. activeClassIdentificator .. talentString;
+	local channel = "RAID";
+    TCalc_SendMessage(TCalc_commsIndex, resultMessage, channel);
+	ChatFrame1:AddMessage(resultMessage);
 end
 
 function TCalc_TargetChanged()
