@@ -103,6 +103,9 @@ function TCalc_ProcessMessage(targetMessage, sender, channel)
     
 end
 
+function TCalc_AccpetSharedTalents(classIndex, talentString, sender)
+end
+
 function TCalc_DisplayTalentsFromString(talentString)
     TCalc_ResetCurrentTalents();
     local activeTabs = TCalc_activeFrame.tabs;
