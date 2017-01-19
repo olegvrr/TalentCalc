@@ -45,6 +45,7 @@ end
 function TManager_SharedTalentViewButtonPressed(sharedTalentButton)
     TCalc_DisplayClassFrameFromIndex(sharedTalentButton.classIndex);
     TCalc_DisplayTalentsFromString(sharedTalentButton.talentString);
+    TCalc_activeFrame.talentNameLabel:SetText("Shared from " .. sharedTalentButton.sender);
 end
 
 function TManager_SharedTalentSaveButtonPressed(sharedTalentButton)
