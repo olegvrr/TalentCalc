@@ -445,6 +445,7 @@ function TCalc_CreateTalentButton(resourceItem, parentTab)
     newButton.currentPoints = 0;
     newButton.talentName = resourceItem.talentName;
     newButton.talentDescriptions = resourceItem.talentDescriptions;
+	newButton.tooltipStringParts = {};
     
     if(newButton.parentTalent ~= nil) then
         if (newButton.parentTalent.button.childTalent == nil) then
@@ -454,25 +455,31 @@ function TCalc_CreateTalentButton(resourceItem, parentTab)
         end
     end
     
-    if(resourceItem.resourceCost ~= nil)then
-        resourceItem.resourceCost = TCalc_AddSpacesIntoTooltip(resourceItem.resourceCost,31);
-        newButton.tooltipStringPart = resourceItem.resourceCost;
-    end
-    if(resourceItem.castCooldown ~= nil)then
-        resourceItem.castCooldown = TCalc_AddSpacesIntoTooltip(resourceItem.castCooldown,31);
-        if(newButton.tooltipStringPart == nil)then
-            newButton.tooltipStringPart = resourceItem.castCooldown;
-        else
-            newButton.tooltipStringPart = newButton.tooltipStringPart .. '\n'.. resourceItem.castCooldown;
-        end
-    end
-    if(resourceItem.requirements ~= nil)then
-        if(newButton.tooltipStringPart == nil)then
-            newButton.tooltipStringPart = resourceItem.requirements;
-        else
-            newButton.tooltipStringPart = newButton.tooltipStringPart .. '\n'.. resourceItem.requirements;
-        end
-    end
+	if (resourceItem.resourceCost ~= nil)then
+		local stringOffset = string.find(resourceItem.resourceCost, '\t');
+
+		if (stringOffset ~= nil) then
+			newButton.tooltipStringParts[1] = string.sub(resourceItem.resourceCost, 1, stringOffset-1);
+			newButton.tooltipStringParts[2] = string.sub(resourceItem.resourceCost, stringOffset+1, string.len(resourceItem.resourceCost));
+		else
+			newButton.tooltipStringParts[1] = resourceItem.resourceCost;
+		end
+	end
+
+	if (resourceItem.castCooldown ~= nil)then
+		local stringOffset = string.find(resourceItem.castCooldown, '\t');
+		if (stringOffset ~= nil) then
+			newButton.tooltipStringParts[3] = string.sub(resourceItem.castCooldown, 1, stringOffset-1);
+			newButton.tooltipStringParts[4] = string.sub(resourceItem.castCooldown, stringOffset+1, string.len(resourceItem.castCooldown));
+		else
+			newButton.tooltipStringParts[3] = resourceItem.castCooldown;
+		end
+	end
+	
+	if (resourceItem.requirements ~= nil)then
+		newButton.tooltipStringParts[5] = resourceItem.requirements;
+	end
+
     TCalc_UpdateTooltipString(newButton);
     
     local talentNumberLabel = CreateFrame("Button",nil,newButton);
@@ -511,20 +518,42 @@ function TCalc_UpdateTooltipString(buttonToUpdate)
     local currentPoints = buttonToUpdate.currentPoints;
     local maxPoints = buttonToUpdate.maxPoints;
     
-    local tooltipString = buttonToUpdate.talentName;
-    tooltipString = tooltipString .. '\n' .. currentPoints .. '/' .. maxPoints;
-    if(buttonToUpdate.tooltipStringPart ~= nil) then
-        tooltipString = tooltipString .. '\n' .. buttonToUpdate.tooltipStringPart;
-    end
+	local tooltipString = buttonToUpdate.talentName;
+
+	local tooltipStringParts = {
+	[0] = nil,
+	[1] = nil,
+	[2] = nil,
+	[3] = nil,
+	[4] = nil,
+	[5] = nil,
+	[6] = nil,
+	[7] = "Next Rank: \n",
+	[8] = nil,
+	}
+	
+	tooltipStringParts[0] = 'Rank ' .. currentPoints .. '/' .. maxPoints .. '\n';
+
+	ChatFrame1:AddMessage(buttonToUpdate.resourceCost);
     
-    if(currentPoints ~= 0)then
-        tooltipString = tooltipString .. '\n' .. buttonToUpdate.talentDescriptions[currentPoints-1];
+	if (buttonToUpdate.tooltipStringParts ~= nil) then
+		for i = 1, 5 do
+			if (buttonToUpdate.tooltipStringParts[i] ~= nil) then
+				tooltipStringParts[i]=buttonToUpdate.tooltipStringParts[i];
+			end
+		end
+	end
+	
+    if(currentPoints ~= 0)then    
+		tooltipStringParts[6] = buttonToUpdate.talentDescriptions[currentPoints-1] .. '\n';
     end
+	
     if(currentPoints < maxPoints) then
-        tooltipString = tooltipString .. '\nNext Rank: \n' .. buttonToUpdate.talentDescriptions[currentPoints];
+	    tooltipStringParts[8] = buttonToUpdate.talentDescriptions[currentPoints];
     end
-    
-    buttonToUpdate.tooltipString = tooltipString;
+
+	buttonToUpdate.tooltipString = tooltipString;
+    buttonToUpdate.tooltipStringParts = tooltipStringParts;
 end
 
 function TCalc_TalentButtonClicked(talentButtonClicked)
@@ -787,7 +816,39 @@ end
 
 function TCalc_MouseEnterTalent(talentButton)
     GameTooltip:SetOwner(talentButton, "ANCHOR_BOTTOMRIGHT", 0, 80);
-    GameTooltip:SetText(talentButton.tooltipString, 1.0, 1.0, 1.0, 1, 1);
+    GameTooltip:SetText(talentButton.tooltipString, 1.0, 1.0, 1.0, 1);
+	
+	if (talentButton.tooltipStringParts ~= nil) then
+		GameTooltip:AddLine(talentButton.tooltipStringParts[0], 1.0, 1.0, 1.0, 1);
+		if (talentButton.tooltipStringParts[1] ~= nil) then
+		
+			if (talentButton.tooltipStringParts[2] ~= nil) then
+				GameTooltip:AddDoubleLine(talentButton.tooltipStringParts[1], talentButton.tooltipStringParts[2], 1, 1, 1, 1, 1, 1);
+			else
+				GameTooltip:AddLine(talentButton.tooltipStringParts[1], 1.0, 1.0, 1.0, 1);
+			end
+		end
+		
+		if (talentButton.tooltipStringParts[3] ~= nil) then
+		
+			if (talentButton.tooltipStringParts[4] ~= nil) then
+				GameTooltip:AddDoubleLine(talentButton.tooltipStringParts[3], talentButton.tooltipStringParts[4], 1, 1, 1, 1, 1, 1);
+			else
+				GameTooltip:AddLine(talentButton.tooltipStringParts[3], 1.0, 1.0, 1.0, 1);
+			end
+		end
+		
+		if (talentButton.tooltipStringParts[5] ~= nil) then
+			GameTooltip:AddLine(talentButton.tooltipStringParts[5], 1.0, 1.0, 1.0, 1);
+		end
+	
+		GameTooltip:AddLine(talentButton.tooltipStringParts[6], 1.0, 0.84, 0.0, 1, 1);
+		if (talentButton.tooltipStringParts[8] ~= nil) then
+			GameTooltip:AddLine(talentButton.tooltipStringParts[7], 1.0, 1.0, 1.0, 1, 1);
+			GameTooltip:AddLine(talentButton.tooltipStringParts[8], 1.0, 0.84, 0.0, 1, 1);
+		end
+	end
+
     GameTooltip:Show();
 end
 
