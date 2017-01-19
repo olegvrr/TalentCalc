@@ -4,7 +4,7 @@ TCalc_classFrameLevel = 0;
 TCalc_talentButtonLevel = 1;
 
 TCalc_talentsTopOffset = 80;
-TCalc_talentsLeftOffset = 40;
+TCalc_talentsLeftOffset = 50;
 TCalc_tierReqOffset = 30;
 
 TCalc_maxTalents = 51;
@@ -58,6 +58,7 @@ function TCalc_OnEvent(event)
     end
     if(event == "ADDON_LOADED" and arg1 == TCalc_commsIndex) then
         TCalc_InitFrames();
+        TCalc_DisplayClassFrameFromName(UnitClass("player"));
         return;
     end
     if (event == "PLAYER_TARGET_CHANGED") then
@@ -88,8 +89,7 @@ function TCalc_ProcessMessage(targetMessage, sender, channel)
 
     if (code == TCalc_inspectResponseCode and sender == TCalc_nameWaiting) then
         local classIndex = tonumber(string.sub(targetMessage, 5, 5));
-        local targetFrame = TCalc_frames[classIndex];
-        TCalc_SwitchFrame(targetFrame);
+        TCalc_DisplayClassFrameFromIndex(classIndex);
         local talentString = string.sub(targetMessage, 6, messageLength);
         TCalc_DisplayTalentsFromString(talentString);
         TCalc_activeFrame.talentNameLabel:SetText(sender);
@@ -97,13 +97,21 @@ function TCalc_ProcessMessage(targetMessage, sender, channel)
 	
 	if (code == TCalc_talentShareCode) then
 		local classIndex = tonumber(string.sub(targetMessage, 5, 5));
-		local talentString = string.sub(targetMessage, 6, messageLength);
-		TCalc_AccpetSharedTalents(classIndex, talentString, sender);
+        local talentSummary = string.sub(targetMessage, 6, 13);
+		local talentString = string.sub(targetMessage, 14, messageLength);
+		TManager_AcceptSharedTalents(classIndex, talentSummary, talentString, sender);
 	end
     
 end
 
-function TCalc_AccpetSharedTalents(classIndex, talentString, sender)
+function TCalc_DisplayClassFrameFromName(className)
+    local classIndex = TCalc_classNameToIndex[className];
+    TCalc_DisplayClassFrameFromIndex(classIndex);
+end
+
+function TCalc_DisplayClassFrameFromIndex(classIndex)
+    local targetFrame = TCalc_frames[classIndex];
+    TCalc_SwitchFrame(targetFrame);
 end
 
 function TCalc_DisplayTalentsFromString(talentString)
@@ -161,12 +169,16 @@ function TCalc_GetTalentStringForActiveFrame()
             end
         end
     end
-	return talentString;
+
+    local tabTalentNum0 = TCalc_GetTwoDigitNumber(TCalc_activeFrame.tabTalentCounter[0]);
+    local tabTalentNum1 = TCalc_GetTwoDigitNumber(TCalc_activeFrame.tabTalentCounter[1]);
+    local tabTalentNum2 = TCalc_GetTwoDigitNumber(TCalc_activeFrame.tabTalentCounter[2]);
+
+	return talentString, tabTalentNum0 .. "/" .. tabTalentNum1 .. "/" .. tabTalentNum2;
 end
 
 function TCalc_ShareActiveFrameTalents()
-
-	local talentString = TCalc_GetTalentStringForActiveFrame();
+	local talentString, talentSummary = TCalc_GetTalentStringForActiveFrame();
 	local activeClassIdentificator;
 	
 	for i=0,8 do
@@ -175,10 +187,23 @@ function TCalc_ShareActiveFrameTalents()
 		end
 	end
 	
-	local resultMessage = TCalc_talentShareCode .. activeClassIdentificator .. talentString;
-	local channel = "RAID";
-    TCalc_SendMessage(TCalc_commsIndex, resultMessage, channel);
-	ChatFrame1:AddMessage(resultMessage);
+	local resultMessage = TCalc_talentShareCode .. activeClassIdentificator .. talentSummary .. talentString;
+	local channel = TCalc_GetPlayerChannel();
+    if (channel ~= nil) then
+        TCalc_SendMessage(TCalc_commsIndex, resultMessage, channel);
+    end
+end
+
+function TCalc_GetPlayerChannel()
+    if (UnitInRaid("player")) then
+        return "RAID";
+    end
+
+    if (UnitInParty("player")) then
+        return "PARTY";
+    end
+    
+    return nil;
 end
 
 function TCalc_TargetChanged()
@@ -249,6 +274,16 @@ function TCalc_SwitchFrame(activatedFrame)
     TCalc_nameWaiting = nil;
 end
 
+function TCalc_ToggleManager()
+    if (TalentManager:IsShown()) then
+        TalentManager:Hide();
+        ToggleTalentManagerButton:SetText("<");
+    else
+        ToggleTalentManagerButton:SetText(">");
+        TalentManager:Show();
+    end
+end
+
 function TCalc_InitFrames()
     TalentCalculator:SetFrameLevel(TCalc_mainFrameLevel);
 
@@ -278,7 +313,7 @@ function TCalc_InitFrames()
             tabNumberLabel:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE, MONOCHROME");
             tabNumberLabel:Show();
             
-            local tabNumberLabelX = TCalc_talentsLeftOffset*3.5 + tabIndex * 250;
+            local tabNumberLabelX = TCalc_talentsLeftOffset*3.5 + tabIndex * 250 - 90;
             local tabNumberLabelY = TCalc_talentsTopOffset/2;
             tabNumberLabel:SetPoint("TOPLEFT", tabNumberLabelX, -tabNumberLabelY);
             currentFrame.tabNumberLabels[tabIndex] = tabNumberLabel;
@@ -295,7 +330,7 @@ function TCalc_InitFrames()
                 tierLabel:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE, MONOCHROME");
                 tierLabel:Show();
                 
-                local tierLabelX = -10 + tabIndex * 250;
+                local tierLabelX = tabIndex * 250;
                 local tierLabelY = TCalc_talentsTopOffset + rowNumber * 55;
                 tierLabel:SetPoint("TOPLEFT", tierLabelX, -tierLabelY);
             end
@@ -355,6 +390,22 @@ function TCalc_InitFrames()
     TCalc_resetActiveTalentsButton.texture:SetTexture(0,0,0,0.8);
     TCalc_resetActiveTalentsButton.texture:SetAllPoints(TCalc_resetActiveTalentsButton);
     
+    --Share button
+    local TalentCalculatorShareButton = CreateFrame("Button",nil,TalentCalculator);
+    TalentCalculatorShareButton:SetFrameStrata(TCalc_frameStrata);
+    TalentCalculatorShareButton:SetWidth(90);
+    TalentCalculatorShareButton:SetHeight(20);
+    TalentCalculatorShareButton:SetFrameLevel(TCalc_talentButtonLevel);
+    TalentCalculatorShareButton:SetText("Share");
+    TalentCalculatorShareButton:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE, MONOCHROME");
+    TalentCalculatorShareButton:SetScript("OnClick", TCalc_ShareActiveFrameTalents);
+
+    TalentCalculatorShareButton:SetPoint("TOPLEFT", 750, -200);
+
+    TalentCalculatorShareButton.texture = TalentCalculatorShareButton:CreateTexture(nil,TCalc_frameStrata);
+    TalentCalculatorShareButton.texture:SetTexture(0.4,0.2,0.6,0.8);
+    TalentCalculatorShareButton.texture:SetAllPoints(TalentCalculatorShareButton);
+    
     --Inspect button
     TalentCalculatorInspectButton = CreateFrame("Button",nil,TalentCalculator);
     TalentCalculatorInspectButton:SetFrameStrata(TCalc_frameStrata);
@@ -365,11 +416,28 @@ function TCalc_InitFrames()
     TalentCalculatorInspectButton:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE, MONOCHROME");
     TalentCalculatorInspectButton:SetScript("OnClick", TCalc_InspectTarget);
 
-    TalentCalculatorInspectButton:SetPoint("TOPLEFT", -90, 0);
+    TalentCalculatorInspectButton:SetPoint("TOPLEFT", 750, -240);
 
     TalentCalculatorInspectButton.texture = TalentCalculatorInspectButton:CreateTexture(nil,TCalc_frameStrata);
     TalentCalculatorInspectButton.texture:SetTexture(0.2,0.2,0.2,0.8);
     TalentCalculatorInspectButton.texture:SetAllPoints(TalentCalculatorInspectButton);
+    
+    --Toggle Talent Manager button
+    ToggleTalentManagerButton = CreateFrame("Button",nil,TalentCalculator);
+    ToggleTalentManagerButton:SetFrameStrata(TCalc_frameStrata);
+    ToggleTalentManagerButton:SetWidth(20);
+    ToggleTalentManagerButton:SetHeight(500);
+    ToggleTalentManagerButton:SetFrameLevel(TCalc_talentButtonLevel);
+    ToggleTalentManagerButton:SetText("<");
+    ToggleTalentManagerButton:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE, MONOCHROME");
+    ToggleTalentManagerButton:SetScript("OnClick", TCalc_ToggleManager);
+    ToggleTalentManagerButton:Enable();
+
+    ToggleTalentManagerButton:SetPoint("TOPLEFT", -20, 0);
+
+    ToggleTalentManagerButton.texture = ToggleTalentManagerButton:CreateTexture(nil,TCalc_frameStrata);
+    ToggleTalentManagerButton.texture:SetTexture(0.2,0.2,0.2,0.8);
+    ToggleTalentManagerButton.texture:SetAllPoints(ToggleTalentManagerButton);
 end
 
 function TCalc_AddTalentButton(talentButton, tabNumber, rowNumber, columnNumber, parentFrame)
@@ -835,4 +903,12 @@ function TCalc_InitTalentTierHolders(targetTab)
         [5] = tier6,
         [6] = tier7,
     };
+end
+
+function TCalc_GetTwoDigitNumber(number)
+    if (number < 10) then
+        return "0"..number;
+    end
+
+    return number;
 end

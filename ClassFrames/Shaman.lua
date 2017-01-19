@@ -25,6 +25,7 @@ function TCalc_InitShamanFrame()
     
     TCalc_InitTalentTabHolders(TCalc_ShamanFrame);
     TCalc_ShamanFrame.treeNames = {"Elemental","Enhancement","Restoration"};
+    TCalc_ShamanFrame.color = TCalc_ShamanColor;
     
     --Selector button
     local shamanSelector = CreateFrame("Button",nil,TalentCalculator);

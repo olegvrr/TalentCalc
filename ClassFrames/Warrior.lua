@@ -25,6 +25,7 @@ function TCalc_InitWarriorFrame()
     
     TCalc_InitTalentTabHolders(TCalc_WarriorFrame);
     TCalc_WarriorFrame.treeNames = {"Arms","Fury","Protection"};
+    TCalc_WarriorFrame.color = TCalc_WarriorColor;
     
     --Selector button
     local warriorSelector = CreateFrame("Button",nil,TalentCalculator);

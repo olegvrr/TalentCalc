@@ -25,6 +25,7 @@ function TCalc_InitDruidFrame()
     
     TCalc_InitTalentTabHolders(TCalc_DruidFrame);
     TCalc_DruidFrame.treeNames = {"Balance","Feral Combat","Restoration"};
+    TCalc_DruidFrame.color = TCalc_DruidColor;
     
     --Selector button
     local druidSelector = CreateFrame("Button",nil,TalentCalculator);

@@ -25,6 +25,7 @@ function TCalc_InitPaladinFrame()
     
     TCalc_InitTalentTabHolders(TCalc_PaladinFrame);
     TCalc_PaladinFrame.treeNames = {"Holy","Protection","Retribution"};
+    TCalc_PaladinFrame.color = TCalc_PaladinColor;
     
     --Selector button
     local paladinSelector = CreateFrame("Button",nil,TalentCalculator);

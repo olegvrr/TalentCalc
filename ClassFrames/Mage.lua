@@ -25,6 +25,7 @@ function TCalc_InitMageFrame()
     
     TCalc_InitTalentTabHolders(TCalc_MageFrame);
     TCalc_MageFrame.treeNames = {"Arcane","Fire","Frost"};
+    TCalc_MageFrame.color = TCalc_MageColor;
     
     --Selector button
     local mageSelector = CreateFrame("Button",nil,TalentCalculator);

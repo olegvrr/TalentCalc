@@ -1,0 +1,147 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+    <Script file="TalentManager.lua"/>
+    <Frame name="TalentManager" frameStrata="BACKGROUND" parent="TalentCalculator" toplevel="true" hidden="true" movable="true" enableMouse="true">
+        <Size>
+            <AbsDimension x="300" y="500"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOPLEFT">
+                <Offset>
+                    <AbsDimension x="-320" y="-30"/>
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Scripts>
+            <OnLoad>
+                TManager_OnLoad()
+            </OnLoad>
+        </Scripts>
+        <Frames>
+            <!-- Shared Tab -->
+            <Button name="$parentSharedTabButton" text="Shared">
+                <Size>
+                    <AbsDimension x="150" y="30"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="0" y="60"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="$parentBackground">
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                                <Anchor point="BOTTOMRIGHT"/>
+                            </Anchors>
+                            <Color r="0.4" g="0.4" b="0.4" a="0.8"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnLoad>
+                        this:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE");
+                    </OnLoad>
+                    <OnClick>
+                        TManager_DisplayTab(TalentManagerSharedTab);
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Frame name="$parentSharedTab" hidden="false">
+                <Size>
+                    <AbsDimension x="300" y="500"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="0" y="30"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="$parentBackground">
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                                <Anchor point="BOTTOMRIGHT"/>
+                            </Anchors>
+                            <Color r="0.4" g="0.4" b="0.4" a="0.8"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnLoad>
+                        TManager_DisplayTab(this);
+                    </OnLoad>
+                </Scripts>
+                <Frames>
+                    <Button name="$parentRecentlySharedLabel" text="Recently shared">
+                        <Size>
+                            <AbsDimension x="300" y="20"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT">
+                                <Offset x="0" y="-10"/>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                this:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE");
+                                this:Disable();
+                            </OnLoad>
+                        </Scripts>
+                    </Button>
+                </Frames>
+            </Frame>
+            <!-- Saved Tab -->
+            <Button name="$parentSavedTabButton" text="Saved">
+                <Size>
+                    <AbsDimension x="150" y="30"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="150" y="60"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="$parentBackground">
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                                <Anchor point="BOTTOMRIGHT"/>
+                            </Anchors>
+                            <Color r="0.3" g="0.3" b="0.5" a="0.8"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Scripts>
+                    <OnLoad>
+                        this:SetFont("Fonts\\MORPHEUS.TTF", 18, "OUTLINE");
+                    </OnLoad>
+                    <OnClick>
+                        TManager_DisplayTab(TalentManagerSavedTab);
+                    </OnClick>
+                </Scripts>
+            </Button>
+            <Frame name="$parentSavedTab" hidden="true">
+                <Size>
+                    <AbsDimension x="300" y="500"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="0" y="30"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="$parentBackground">
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                                <Anchor point="BOTTOMRIGHT"/>
+                            </Anchors>
+                            <Color r="0.3" g="0.3" b="0.5" a="0.8"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Frame>
+        </Frames>
+    </Frame>
+</Ui>

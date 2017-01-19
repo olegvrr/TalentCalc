@@ -25,6 +25,7 @@ function TCalc_InitWarlockFrame()
     
     TCalc_InitTalentTabHolders(TCalc_WarlockFrame);
     TCalc_WarlockFrame.treeNames =  {"Affliction","Demonology","Destruction"};
+    TCalc_WarlockFrame.color = TCalc_WarlockColor;
     
     --Selector button
     local warlockSelector = CreateFrame("Button",nil,TalentCalculator);

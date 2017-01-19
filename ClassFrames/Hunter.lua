@@ -25,6 +25,7 @@ function TCalc_InitHunterFrame()
     
     TCalc_InitTalentTabHolders(TCalc_HunterFrame);
     TCalc_HunterFrame.treeNames = {"Beast Mastery","Marksmanship","Survival"};
+    TCalc_HunterFrame.color = TCalc_HunterColor;
     
     --Selector button
     local hunterSelector = CreateFrame("Button",nil,TalentCalculator);

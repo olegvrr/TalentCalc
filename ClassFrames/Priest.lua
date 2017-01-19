@@ -25,6 +25,7 @@ function TCalc_InitPriestFrame()
     
     TCalc_InitTalentTabHolders(TCalc_PriestFrame);
     TCalc_PriestFrame.treeNames = {"Discipline","Holy","Shadow"};
+    TCalc_PriestFrame.color = TCalc_PriestColor;
     
     --Selector button
     local priestSelector = CreateFrame("Button",nil,TalentCalculator);

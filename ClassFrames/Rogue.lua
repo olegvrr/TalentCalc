@@ -25,6 +25,7 @@ function TCalc_InitRogueFrame()
     
     TCalc_InitTalentTabHolders(TCalc_RogueFrame);
     TCalc_RogueFrame.treeNames = {"Assassination","Combat","Subtlety"};
+    TCalc_RogueFrame.color = TCalc_RogueColor;
     
     --Selector button
     local rogueSelector = CreateFrame("Button",nil,TalentCalculator);
