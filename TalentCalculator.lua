@@ -596,7 +596,7 @@ function TCalc_UpdateTooltipString(buttonToUpdate)
 	[4] = nil,
 	[5] = nil,
 	[6] = nil,
-	[7] = "Next Rank: \n",
+	[7] = "\nNext Rank: \n",
 	[8] = nil,
 	}
 	
@@ -720,6 +720,7 @@ function TCalc_ResetCurrentTalents()
                 if(currentActiveTier[k] ~= nil)then
                     currentActiveTier[k].currentPoints = 0;
                     TCalc_UpdateDependecyUI(currentActiveTier[k]);
+					TCalc_UpdateTooltipString(currentActiveTier[k]);
                 end
             end
         end
@@ -912,7 +913,9 @@ function TCalc_MouseEnterTalent(talentButton)
 	
 		GameTooltip:AddLine(talentButton.tooltipStringParts[6], 1.0, 0.84, 0.0, 1, 1);
 		if (talentButton.tooltipStringParts[8] ~= nil) then
-			GameTooltip:AddLine(talentButton.tooltipStringParts[7], 1.0, 1.0, 1.0, 1, 1);
+			if (talentButton.tooltipStringParts[6] ~= nil) then
+				GameTooltip:AddLine(talentButton.tooltipStringParts[7], 1.0, 1.0, 1.0, 1, 1);
+			end
 			GameTooltip:AddLine(talentButton.tooltipStringParts[8], 1.0, 0.84, 0.0, 1, 1);
 		end
 	end
