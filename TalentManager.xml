@@ -18,7 +18,7 @@
         </Scripts>
         <Frames>
             <!-- Shared Tab -->
-            <Button name="$parentSharedTabButton" text="Shared">
+            <Button name="$parentSharedTabButton" text="Shared" hidden="true">
                 <Size>
                     <AbsDimension x="150" y="30"/>
                 </Size>
@@ -92,7 +92,7 @@
                 </Frames>
             </Frame>
             <!-- Saved Tab -->
-            <Button name="$parentSavedTabButton" text="Saved">
+            <Button name="$parentSavedTabButton" text="Saved" hidden="true">
                 <Size>
                     <AbsDimension x="150" y="30"/>
                 </Size>
