@@ -1,9 +1,9 @@
 TCalc_RogueFrame = nil;
 
 TCalc_RogueColor = {}
-TCalc_RogueColor.red=1.00
-TCalc_RogueColor.green=0.96
-TCalc_RogueColor.blue=0.41
+TCalc_RogueColor.red=0.95
+TCalc_RogueColor.green=0.9
+TCalc_RogueColor.blue=0.37
 
 function TCalc_InitRogueFrame()
     if (TCalc_RogueFrame ~= nil) then

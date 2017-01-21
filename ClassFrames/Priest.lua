@@ -1,9 +1,9 @@
 TCalc_PriestFrame = nil;
 
 TCalc_PriestColor = {}
-TCalc_PriestColor.red=1.00
-TCalc_PriestColor.green=1.00
-TCalc_PriestColor.blue=1.00
+TCalc_PriestColor.red=0.9
+TCalc_PriestColor.green=0.9
+TCalc_PriestColor.blue=0.9
 
 function TCalc_InitPriestFrame()
     if (TCalc_PriestFrame ~= nil) then

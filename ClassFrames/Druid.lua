@@ -1,9 +1,9 @@
 TCalc_DruidFrame = nil;
 
 TCalc_DruidColor = {}
-TCalc_DruidColor.red=1.00
-TCalc_DruidColor.green=0.49
-TCalc_DruidColor.blue=0.04
+TCalc_DruidColor.red=0.95
+TCalc_DruidColor.green=0.55
+TCalc_DruidColor.blue=0
 
 function TCalc_InitDruidFrame()
     if (TCalc_DruidFrame ~= nil) then

@@ -2,8 +2,8 @@ TCalc_ShamanFrame = nil;
 
 TCalc_ShamanColor = {}
 TCalc_ShamanColor.red=0.0
-TCalc_ShamanColor.green=0.44
-TCalc_ShamanColor.blue=0.87
+TCalc_ShamanColor.green=0.56
+TCalc_ShamanColor.blue=0.96
 
 function TCalc_InitShamanFrame()
     if (TCalc_ShamanFrame ~= nil) then
