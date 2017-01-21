@@ -1,7 +1,7 @@
 TCalc_DruidFrame = nil;
 
 TCalc_DruidColor = {}
-TCalc_DruidColor.red=0.95
+TCalc_DruidColor.red=0.93
 TCalc_DruidColor.green=0.55
 TCalc_DruidColor.blue=0
 
