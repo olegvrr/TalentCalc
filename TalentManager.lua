@@ -34,7 +34,7 @@ function TManager_AcceptSharedTalents(classIndex, talentSummary, talentString, s
 
     sharedTalentButton:Show();
     sharedTalentButton.viewButton:Show();
-    sharedTalentButton.saveButton:Show();
+    --sharedTalentButton.saveButton:Show();
     TManager_currentSharedIndex = TManager_currentSharedIndex + 1;
 
     if (TManager_currentSharedIndex > TManager_maxSharedIndex) then
@@ -73,7 +73,7 @@ function TManager_InitSharedTalentButton(buttonIndex)
 
     local sharedTalentButton = CreateFrame("Button",nil,TalentManagerSharedTab);
     sharedTalentButton:SetFrameStrata(TCalc_frameStrata);
-    sharedTalentButton:SetWidth(200);
+    sharedTalentButton:SetWidth(250);
     sharedTalentButton:SetHeight(30);
     sharedTalentButton:SetFrameLevel(TCalc_talentButtonLevel);
     sharedTalentButton:SetText("Test " .. buttonIndex);
@@ -98,7 +98,7 @@ function TManager_InitSharedTalentButton(buttonIndex)
     viewSharedTalentButton:Enable();
     viewSharedTalentButton:Hide();
 
-    viewSharedTalentButton:SetPoint("TOPLEFT", 200, -buttonY);
+    viewSharedTalentButton:SetPoint("TOPLEFT", 250, -buttonY);
 
     viewSharedTalentButton.texture = viewSharedTalentButton:CreateTexture(nil,TCalc_frameStrata);
     viewSharedTalentButton.texture:SetTexture(0.4,0.2,0.4,1);
@@ -115,7 +115,7 @@ function TManager_InitSharedTalentButton(buttonIndex)
     saveSharedTalentButton:Enable();
     saveSharedTalentButton:Hide();
 
-    saveSharedTalentButton:SetPoint("TOPLEFT", 250, -buttonY);
+    saveSharedTalentButton:SetPoint("TOPLEFT", 200, -buttonY);
 
     saveSharedTalentButton.texture = saveSharedTalentButton:CreateTexture(nil,TCalc_frameStrata);
     saveSharedTalentButton.texture:SetTexture(0.1,0.4,0.1,1);
