@@ -601,10 +601,7 @@ function TCalc_UpdateTooltipString(buttonToUpdate)
 	}
 	
 	tooltipStringParts[0] = 'Rank ' .. currentPoints .. '/' .. maxPoints .. '\n';
-
-	ChatFrame1:AddMessage(buttonToUpdate.resourceCost);
-    
-	if (buttonToUpdate.tooltipStringParts ~= nil) then
+    if (buttonToUpdate.tooltipStringParts ~= nil) then
 		for i = 1, 5 do
 			if (buttonToUpdate.tooltipStringParts[i] ~= nil) then
 				tooltipStringParts[i]=buttonToUpdate.tooltipStringParts[i];
